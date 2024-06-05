@@ -1,35 +1,31 @@
-//check WalkerDemo for movement stuffs
-class Snake {
-    int x, y;
-    int size;
-    int speed;
+//Global Declarations
+Snake Bob;
 
-    Snake(int tempx, int tempy) {
-        x = tempx;
-        y = tempy;
-        size = 25;
-        speed = 20; 
-    }
+void setup() {
+  size(1500,700);
+  Bob = new Snake(0,0);
+  
+}
 
-    void display() {
-        fill(0);
-        rect(x,y,size,size);
-    }
+void draw() {
+  background(255,255,255);
+  Bob.display();
+}
 
-    void move(int dir) {
-    // Dir is a state variable representing direction/movement from keyPressed
-    if (dir == 0) {
-      // 0,0, is top left, all Y values are positive going downwards
-      y = y - speed;
-    }
-    else if (dir == 1) {
-      x = x + speed;
-    }
-    else if (dir == 2) {
-      y = y + speed;
-    }
-    else if (dir == 3) {
-      x = x - speed;
-    }
+void keyPressed() {
+  // For arrows use keyCode and UP, DOWN, ENTER, etc...
+  // For ACSII characters, do key and 'a', 'w', etc...
+  
+  if (keyCode == UP || key == 'w') {
+    Bob.move(0);
+  }
+  else if (keyCode == RIGHT || key == 'd') {
+    Bob.move(1);
+  }
+  else if (keyCode == DOWN || key == 's') {
+    Bob.move(2);
+  }
+  else if (keyCode == LEFT || key == 'a') {
+    Bob.move(3);
   }
 }
