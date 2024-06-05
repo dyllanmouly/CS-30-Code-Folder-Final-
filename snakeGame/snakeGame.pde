@@ -4,7 +4,6 @@ Snake Bob;
 void setup() {
   size(1500,700);
   Bob = new Snake(0,0);
-  
 }
 
 void draw() {
@@ -13,9 +12,6 @@ void draw() {
 }
 
 void keyPressed() {
-  // For arrows use keyCode and UP, DOWN, ENTER, etc...
-  // For ACSII characters, do key and 'a', 'w', etc...
-  
   if (keyCode == UP || key == 'w') {
     Bob.move(0);
   }
