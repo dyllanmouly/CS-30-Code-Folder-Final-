@@ -1,7 +1,6 @@
 //check WalkerDemo for movement stuffs
 class Snake {
     int x, y;
-    int d, dx, dy;
     int size;
     int speed;
 
@@ -33,18 +32,4 @@ class Snake {
       x = x - speed;
     }
   }
-    void move() {
-    //Apply the rate of change (velocity/speed)
-    x = x + dx;
-    y = y + dy;
-
-    //reverse directions
-    if (x <= d/2 || x >= width - d/2) {
-        dx = dx* -1;
-    }
-
-    if (y <= d/2 || y >= height - d/2) {
-        dy = dy * -1;
-    }
-    }
 }
