@@ -26,7 +26,7 @@ public class adventureGame {
     {
         if (itemsequipped == 3){
             Scanner keys = new Scanner(System.in);
-            System.out.println("You are fully equiped and after a long fight, you have slain the dragon. \n The Townspeople have commended your actions and you are awarded a title named: \n [Valiant Hero].");
+            System.out.println("You were fully equipped and after a long fight, you have slain the dragon. \n The Townspeople have commended your actions and you are awarded a title named: \n [Valiant Hero].");
             keys.nextLine();
             System.out.println("Ending 2/3: Hero of Pernk :)");
 
