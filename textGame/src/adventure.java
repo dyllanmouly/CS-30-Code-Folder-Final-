@@ -2,7 +2,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class adventure {
-    
+
+    static int choice1, itemsequipped, CurrentlyEquippedList, itemsbag;
 
     public static int kingsCall(){
         Scanner keys = new Scanner(System.in);
@@ -40,8 +41,16 @@ public class adventure {
     {
         Scanner keys = new Scanner(System.in);
         if (CurrentlyEquippedList == 3){
-            System.out.println("You enter the Dragon's Den and begun your battle. You took hard hits and did the same to the dragon. \n You moved swiftly to dodge the dragons attack and attacked it from weak areas. \n Finally, the dragon was heavily injured and tired and so were you, so you took this one chance and. . . \n Slayed the dragon ocne and for all!");
-
+            System.out.println("You enter the Dragon's Den and begun your battle. You took hard hits and did the same to the dragon. \n You moved swiftly to dodge the dragons attack and attacked it from weak areas. \n Finally, the dragon was heavily injured and tired and so were you, so you took this one chance and. . . \n Slayed the dragon ocne and for all! [Enter]");
+            keys.nextLine();
+            System.out.println("Pernk Badge achieved: [Pernk's Greatest Hero]");
+    
+            
         }
+        else{
+            System.out.println("You enter the Dragon's Den and begun your battle. You took hard hits and did the same to the dragon. \n You moved swiftly to dodge the dragons attack and attacked it from weak areas. \n Finally, the dragon was heavily injured and tired and so were you, so you took this one chance and. . . \n Died in a gruesome death in the arena. [Enter]");
+            
+        }
+        
     }
 }
