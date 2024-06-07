@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class adventure {
 
-    static int choice1, itemsequipped, CurrentlyEquippedList, itemsbag;
+    static int choice2, itemsequipped, CurrentlyEquippedList, itemsbag;
 
     public static int kingsCall(){
         Scanner keys = new Scanner(System.in);
@@ -24,6 +24,64 @@ public class adventure {
     }
 
     public static int splitpaths(){
+        Scanner keys = new Scanner(System.in);
+        System.out.println("You stumble upon the crossroads. [Enter]");
+        keys.nextLine();
+        System.out.println("This is where you will take your first step on your adventure. [Enter]");
+        keys.nextLine();
+        System.out.println("You can go 4 ways. [1] North, [2] East [3] South, [4] West. Which will you choose? ");
+        choice2 = keys.nextInt();
+        if (choice2 == 1){
+            volcanoStart();
+        }
+        if (choice2 == 2){
+            lakeStart();
+        }
+        if (choice2 == 3){
+            dragonStart();
+        }
+        if (choice2 == 4){
+            desertStart();
+        }
+        else{
+            System.out.println("You got confused and ended up walking in a circle. Try again? [Enter]");
+            keys.nextLine();
+            splitpaths();
+        }
+        return 0;
+    }
+
+    public static int volcanoStart(){
+        Scanner keys = new Scanner(System.in);
+        System.out.println("You decide to head north, and you find yourself standing at the base of the Volcano. [Enter]");
+        keys.nextLine();
+        System.out.println("You try to recall the King's words, and remember that the Sword of Flame is located here. [Enter]");
+        keys.nextLine();
+        System.out.println("He didn't tell you where though. [Enter]");
+        keys.nextLine();
+        volcanoCont1();
+        return 0;
+    }
+    public static int volcanoCont1(){
+        
+        return 0;
+    }
+    public static int lakeStart(){
+        Scanner keys = new Scanner(System.in);
+        System.out.println("klake ");
+        keys.nextLine();
+        return 0;
+    }
+    public static int dragonStart(){
+        Scanner keys = new Scanner(System.in);
+        System.out.println("dargon");
+        keys.nextLine();
+        return 0;
+    }
+    public static int desertStart(){
+        Scanner keys = new Scanner(System.in);
+        System.out.println("desert");
+        keys.nextLine();
         return 0;
     }
 
