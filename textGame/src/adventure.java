@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class adventure {
     
+    static int choice2;
 
     public static int kingsCall(){
         Scanner keys = new Scanner(System.in);
@@ -23,25 +24,74 @@ public class adventure {
     }
 
     public static int splitpaths(){
+        Scanner keys = new Scanner(System.in);
+        System.out.println("You stumble upon the crossroads. [Enter]");
+        keys.nextLine();
+        System.out.println("This is where you will take your first step on your adventure. [Enter]");
+        keys.nextLine();
+        System.out.println("You can go 4 ways. [1] North, [2] East [3] South, [4] West. Which will you choose? ");
+        choice2 = keys.nextInt();
+        if (choice2 == 1){
+            volcanoStart();
+        }
+        if (choice2 == 2){
+            lakeStart();
+        }
+        if (choice2 == 3){
+            dragonStart();
+        }
+        if (choice2 == 4){
+            desertStart();
+        }
+        else{
+            System.out.println("You got confused and ended up walking in a circle. Try again? [Enter]");
+            keys.nextLine();
+            splitpaths();
+        }
         return 0;
     }
 
-    public void beforedragonFight()
-    {
+    public static int volcanoStart(){
         Scanner keys = new Scanner(System.in);
-        System.out.println("You arrive at the dragons gate--feeling pumped you then stop yourself just to make sure if you are fully equipped.");
+        System.out.println("volcantio");
         keys.nextLine();
-        System.out.println("You are currently equipped with:" + CurrentlyEquippedList + "\n With these items, do you feel ready to fight and slay the dragon? \n (You cannot go back, unless you want to be executed for being a coward). [1]");
-        keys.nextLine();
-        System.out.println("Very well, you prepare yourself as you open death doors of the dragon. From here on out, you feel courageous, a warrior who will save the Kingdom of Pernk. \n You feel Dragon-Hearted.");
+        return 0;
     }
-    
-    public void dragonFight()
-    {
+    public static int lakeStart(){
         Scanner keys = new Scanner(System.in);
-        if (CurrentlyEquippedList == 3){
-            System.out.println("You enter the Dragon's Den and begun your battle. You took hard hits and did the same to the dragon. \n You moved swiftly to dodge the dragons attack and attacked it from weak areas. \n Finally, the dragon was heavily injured and tired and so were you, so you took this one chance and. . . \n Slayed the dragon ocne and for all!");
+        System.out.println("klake ");
+        keys.nextLine();
+        return 0;
+    }
+    public static int dragonStart(){
+        Scanner keys = new Scanner(System.in);
+        System.out.println("dargon");
+        keys.nextLine();
+        return 0;
+    }
+    public static int desertStart(){
+        Scanner keys = new Scanner(System.in);
+        System.out.println("desert");
+        keys.nextLine();
+        return 0;
+    }
 
-        }
-    }
+    // public void beforedragonFight()
+    // {
+    //     Scanner keys = new Scanner(System.in);
+    //     System.out.println("You arrive at the dragons gate--feeling pumped you then stop yourself just to make sure if you are fully equipped.");
+    //     keys.nextLine();
+    //     System.out.println("You are currently equipped with:" + CurrentlyEquippedList + "\n With these items, do you feel ready to fight and slay the dragon? \n (You cannot go back, unless you want to be executed for being a coward). [1]");
+    //     keys.nextLine();
+    //     System.out.println("Very well, you prepare yourself as you open death doors of the dragon. From here on out, you feel courageous, a warrior who will save the Kingdom of Pernk. \n You feel Dragon-Hearted.");
+    // }
+    
+    // public void dragonFight()
+    // {
+    //     Scanner keys = new Scanner(System.in);
+    //     if (CurrentlyEquippedList == 3){
+    //         System.out.println("You enter the Dragon's Den and begun your battle. You took hard hits and did the same to the dragon. \n You moved swiftly to dodge the dragons attack and attacked it from weak areas. \n Finally, the dragon was heavily injured and tired and so were you, so you took this one chance and. . . \n Slayed the dragon ocne and for all!");
+
+    //     }
+    // }
 }
