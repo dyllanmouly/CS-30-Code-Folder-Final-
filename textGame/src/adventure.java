@@ -46,7 +46,7 @@ public class adventure {
         if (choice2 == 4){
             desertStart();
         }
-        else{
+        else if (choice2 >= 5){
             System.out.println("You got confused and ended up walking in a circle. Try again? [Enter]");
             keys.nextLine();
             splitpaths();
@@ -88,7 +88,7 @@ public class adventure {
         else{
             System.out.println("Disappointed, you turn around and go back down the road. [Enter]");
             huh++;
-            keys.nextInt();
+            keys.nextLine();
             volcanoStart();
         }
         return 0;
@@ -107,6 +107,7 @@ public class adventure {
             if (choiceV2 == 1){
                 System.out.println("You dodge to the left, but get hit by the boulder. You dodged right into it you fool. (injury +1) [Enter]");
                 volcanoInjury++;
+                keys.nextLine();
                 System.out.println("Although you are injured, you keep running. [Enter]");
                 keys.nextLine();
                 volcanoCont2();
@@ -125,11 +126,13 @@ public class adventure {
             if (choiceV3 == 1){
                 System.out.println("You see the boulder falling short and run away from it, avoiding it entirely. [Enter]");
                 keys.nextLine();
+                volcanoCont3();
             }
             if (choiceV3 == 2){
-                System.out.println("You see the boulder falling short and decide to give it a big hug, but it didn't share your feelings, deciding to crush you under it's weight. [Enter]");
+                System.out.println("You see the boulder falling short and decide to give it a big hug, but it didn't share your feelings, deciding to crush you under it's weight. (injury + 1)[Enter]");
                 volcanoInjury++;
                 keys.nextLine();
+                volcanoCont3();
             }
         return 0;
     }
@@ -142,7 +145,7 @@ public class adventure {
             if (choiceV4 == 1){
                 System.out.println("You try to run to the left, but the boulder follows you. [Enter]");
                 keys.nextLine();
-                System.out.println("You manage to jump out of the way before the boulder falls down, but the shockwave from it hitting the ground knocks you back into a wall. [Enter]");
+                System.out.println("You manage to jump out of the way before the boulder falls down, but the shockwave from it hitting the ground knocks you back into a wall. (injury + 1) [Enter]");
                 volcanoInjury++;
                 keys.nextLine();
                 if (volcanoInjury == 3){
@@ -151,7 +154,7 @@ public class adventure {
                     System.out.println("A little while later, you succumb to your injuries. Ending 4: Rock Eater");
                     keys.nextLine();
                 }
-                else{
+                else if(volcanoInjury <= 2){
                     volcanoCont4();
                 }
             }
