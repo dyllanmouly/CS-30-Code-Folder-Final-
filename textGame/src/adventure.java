@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class adventure {
 
-    static int choice2, itemsequipped, CurrentlyEquippedList, itemsbag;
+    static int choice2, choiceD1, choiceD2, choiceD3, choiceD4, itemsequipped, CurrentlyEquippedList, itemsbag;
 
     public static int kingsCall(){
         Scanner keys = new Scanner(System.in);
@@ -80,9 +80,80 @@ public class adventure {
     }
     public static int desertStart(){
         Scanner keys = new Scanner(System.in);
-        System.out.println("desert");
+        System.out.println("You decided to go West and find yourself in the Desert. [ENTER]");
         keys.nextLine();
+        System.out.println("You recalled the king's words as he said the [Rock Armor] would be in here. [ENTER]");
+        keys.nextLine();
+        System.out.println("But because of his alzheimers, He didn't tell where. So you are forced to look at every spot in the desert while being attacked by the suns heat. [ENTER]");
+        keys.nextLine();
+        System.out.println("From afar, you see a temple and you are curious to see what treasures lies within. [ENTER]");
+        keys.nextLine();
+        System.out.println("Do you plan to go towards the temple? or keep searching around your area. [1] [2]");
+        choiceD1 = keys.nextInt();
+        if (choiceD1 == 1){
+            desertcont1();
+        }
+        if (choiceD1 == 2){
+            System.out.println("You decide to not go to the temple as you believe there are more treasures lurking around in your area.");
+            keys.nextLine();
+            System.out.println("Unfortunately, your travels around the area has caused you to be de-hydrated due to the heat, which in turn leads you to your death. Great choice of action Hero. \n Ending 6: [Dehydration]");
+        }
         return 0;
+    }
+    public static int desertcont1()
+    {
+        Scanner keys = new Scanner(System.in);
+
+        System.out.println("You decide to continue forward to the temple and investigate its treasures. [ENTER]");
+        keys.nextLine();
+        System.out.println("You enter the temple and see colored blocks on the ground, alongside small pillars on the side. [ENTER]");
+        keys.nextLine();
+        System.out.println("The middle colored group stands out the most to you. It looks raggid, cracked, and has holes, which at a closer look, leads into something deeper below. [ENTER]");
+        keys.nextLine();
+        System.out.println("It seems that you need to break the ground as it will unvail more treasures, do you break the block? [1] [2]");
+        choiceD2 = keys.nextInt();
+        if (choiceD2 == 1){
+            System.out.println("You decided to break the ground knowing the risk for breaking your legs as you land. [ENTER]"); 
+            keys.nextLine();
+            System.out.println("You look down and see a TRAP! pressure plate waiting to be stepped on the ground. With your quick thinking, you quickly move to the side and land safely out of the plates reach. [ENTER]");
+            desertcont2();
+        }
+        if (choiceD2 == 2){
+            System.out.println("You decided to break the ground knowing the risk for breaking your legs as you land. [ENTER]"); 
+            keys.nextLine();
+            System.out.println("You look down and see a TRAP! pressure plate waiting to be stepped on the ground. \n You were too late to move to the side and you explode instantly the moment you landed on the pressure plate. \n Ending 7: [metro-booming make it boom]\n \n ");
+        }
+        return 0;
+
+    }
+    public static int desertcont2()
+    {
+        Scanner keys = new Scanner(System.in);
+        System.out.println("You find yourself underneath the grounds of the temple after landing, there lies 4 chests in every side. [ENTER]");
+        keys.nextLine();
+        System.out.println("You assume one of these chests will have the treasure, which chest do you for first? [1] [2] [3] [4]");
+        choiceD3 = keys.nextInt();
+        if (choiceD3 == 1){
+            System.out.println("You open the chest on your left and uncover. . . Cobwebs, Dust, Pieces of ripped fabric and nothing more. Disappointing one to say.");
+            desertcont2();
+        }
+        if (choiceD3 == 2){
+            System.out.println("You open the chest on your right and uncover. . . A small Dyllan Mouly plushie ready to screw you up. You exploded instantly on the spot. GG ");
+            keys.nextLine();
+            System.out.println("Ending 8: [get pernked asshat lol by: Dyllan Mouly]");
+        }
+        if (choiceD3 == 3){
+            System.out.println("You open the chest infront of you and uncover. . . A piece of paper, sticks, a small bone and a broken rod. Another dentrimented chest. Lets try again. [ENTER]");
+            desertcont2();
+        }
+        if (choiceD3 == 4){
+            System.out.println("You open the chest behind you and uncover. . . The Rock Armor! This is the armor piece that the king was talking about. [ENTER]");
+            keys.nextLine();
+            System.out.println("You grabbed the armor piece and climbed yourself out of the hole, and out towards the crossroads to contine your adventure.");
+            splitpaths();
+        }
+        return 0;
+
     }
 
     public void beforedragonFight()
@@ -90,6 +161,7 @@ public class adventure {
         Scanner keys = new Scanner(System.in);
         System.out.println("You arrive at the dragons gate--feeling pumped you then stop yourself just to make sure if you are fully equipped.");
         keys.nextLine();
+
         System.out.println("You are currently equipped with:" + CurrentlyEquippedList + "\n With these items, do you feel ready to fight and slay the dragon? \n (You cannot go back, unless you want to be executed for being a coward). [1]");
         keys.nextLine();
         System.out.println("Very well, you prepare yourself as you open death doors of the dragon. From here on out, you feel courageous, a warrior who will save the Kingdom of Pernk. \n You feel Dragon-Hearted.");
