@@ -4,9 +4,11 @@ import java.util.Scanner;
 public class adventure {
 
     static int choice2;
-    static int volcanoInjury, huh, choiceV1, choiceV2, choiceV3, choiceV4;
-    static int choiceD1, choiceD2, choiceD3, choiceD4; //desert ints
+    static int volcanoInjury, huh, choiceV1, choiceV2, choiceV3, choiceV4; //volcano ints
+    static int choiceD1, choiceD2, choiceD3; //desert ints
+    static int choiceL1, choiceL2, choiceL3; //Lake ints
     static int itemsequipped, CurrentlyEquippedList, itemsbag;
+    static int sword, shield, armor;
 
     public static int kingsCall(){
         Scanner keys = new Scanner(System.in);
@@ -172,12 +174,6 @@ public class adventure {
 
     }
 
-    public static int lakeStart(){
-        Scanner keys = new Scanner(System.in);
-        System.out.println("klake ");
-        keys.nextLine();
-        return 0;
-    }
     public static int dragonStart(){
         Scanner keys = new Scanner(System.in);
         System.out.println("dargon");
@@ -261,6 +257,90 @@ public class adventure {
         return 0;
 
     }
+
+    public static int lakeStart()
+    {
+        Scanner keys = new Scanner(System.in);
+        System.out.println("You venture yourself towards the lakes as told by the king. Somewhere around here, there lies the [Water Shield] as the king foretold. [ENTER]");
+        keys.nextLine();
+        System.out.println("Then again. . . he didn't tell you where it is. [What a foolish king...] you said to yourself. [ENTER]");
+        keys.nextLine();
+        System.out.println("You venture deep into the lakes as the water slowly rises towards your waist as you explore more further. [ENTER]");
+        keys.nextLine();
+        System.out.println("You feel something hit your feet, you stop and think if you should grab it. Do you? [1] [2]");
+        choiceL1 = keys.nextInt();
+        if (choiceL1 == 1){
+            System.out.println("You crouched down to grab whatever it is underwater, you feel a button and you tap on it. . . [ENTER]");
+            keys.nextLine();
+            System.out.println("You hear the ground rumbling and as such, you stay on guard and look around your surroundings. [ENTER]");
+            keys.nextLine();
+            System.out.println("Unknowingly, the ground below you was a gate and suddenly; the gates open leaving you to fall quickly. [ENTER]");
+            keys.nextLine();
+            System.out.println("From below, you see a big mushroom for you to safely land on. [ENTER]");
+            keys.nextLine();
+            System.out.println("As such, you landed on the mushroom with no injuries. But you stumbled yourself upon a new area, an underground water temple. [ENTER]");
+            keys.nextLine();
+            System.out.println("The gates above you have closed. Assuming there will be another way to get out of here once you achieve the shield. [ENTER]");
+            keys.nextLine();
+            LakeCont();
+            
+        }
+        if (choiceL1 == 2){
+            System.out.println("");
+            System.out.println("You decided to ignore the thump on your foot and continue walking towards deeper into the lakes in the woods. [ENTER]");
+            keys.nextLine();
+            System.out.println("You continue walking aimlessly, seeming as if you have no guide and no direction to where to go, you just continue walking. [ENTER]");
+            keys.nextLine();
+            System.out.println("You begin to think how long are these lakes and woods as you continue to walk forward. [ENTER]");
+            keys.nextLine();
+            System.out.println("... [ENTER]");
+            keys.nextLine();
+            System.out.println("... [ENTER]");
+            keys.nextLine();
+            System.out.println("... [ENTER]");
+            keys.nextLine();
+            System.out.println("Such time has passed and you lost track of time, but your determination to find something atleast when the walking is done burns evermore greater. [ENTER]");
+            keys.nextLine();
+            System.out.println("Ending: ??? [See you on the other side]"); //ENDING
+        }
+        return 0;
+    }
+    public static int LakeCont()
+    {
+        Scanner keys = new Scanner(System.in);
+        System.out.println("You see another massive gate infront of you and it requires something for it to be opened. [ENTER]");
+        keys.nextLine();
+        System.out.println("Maybe what you grabbed earlier from the surface has something to do with it. So you take it out of your pocket and go infront of the gate. [ENTER]");
+        keys.nextLine();
+        System.out.println("You put the object infront of the gate and it starts brightly glowing as the gate slowly opens at the same time.");
+        keys.nextLine();
+        System.out.println("You put the bright object down and infront of you, there lies the shield ontop of a stand. [ENTER]");
+        keys.nextLine();
+        System.out.println("You cautiously walk towards it, thinking there'd be traps in here. . . [ENTER]");
+        keys.nextLine();
+        System.out.println("But to a surprise, there was none. You sighe a relief and picked up the shield. [ENTER]");
+        keys.nextLine();
+        System.out.println("BUT!!!!! [ENTER]");
+        keys.nextLine();
+        System.out.println("The whole place starts to rumble and shaking violently as its about to collapse! [ENTER]");
+        keys.nextLine();
+        System.out.println("[  youre shitting with me right now ._.  ] as you said to yourself, but no time for that you began to run towards the mushroom. [ENTER]");
+        keys.nextLine();
+        System.out.println("You jump infront of the mushroom and you suddenly get boosted up very high in the sky, the gates from the surface were also opened but were rapidly closing. [ENTER]");
+        keys.nextLine();
+        System.out.println("You BARELY make it through as the gates close tight behind you, as you fly into the air, you fall and crash down towards the water, leaving you very drenched. [ENTER]");
+        keys.nextLine();
+        System.out.println("You get up and fix yourself, and now you have the shield on your left hand. [ENTER]");
+        keys.nextLine();
+        System.out.println("It is time to head back to the crossroads you said, but it will take a long due to how far you ventured in here. [ENTER]");
+
+
+
+
+        return 0;
+    }
+
+
 
     public void beforedragonFight()
     {
