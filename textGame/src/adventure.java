@@ -58,11 +58,11 @@ public class adventure {
 
     public static int volcanoStart(){
         Scanner keys = new Scanner(System.in);
-        System.out.println("You decide to head north, and you find yourself standing at the base of the Volcano. [Enter]");
+        System.out.println("You decide to head north, and you find yourself standing at the base of the Volcano. [ENTER]");
         keys.nextLine();
-        System.out.println("You try to recall the King's words, and remember that the [Legendary Sword of Flame] is located here. [Enter]");
+        System.out.println("You try to recall the King's words, and remember that the [Legendary Sword of Flame] is located here. [ENTER]");
         keys.nextLine();
-        System.out.println("He didn't tell you where though. You sigh, and continue down the road. [Enter]");
+        System.out.println("He didn't tell you where though. You sigh, and continue down the road. [ENTER]");
         keys.nextLine();
         System.out.println("You stumble upon a fork in the road. Do you go: [1] Left, or [2] Right? ");
         choiceV1 = keys.nextInt();
@@ -78,19 +78,19 @@ public class adventure {
         Scanner keys = new Scanner(System.in);
         System.out.println("You decided to go right. [Enter]");
         keys.nextLine();
-        System.out.println("You head down the path and come across a dead end. [Enter]");
+        System.out.println("You head down the path and come across a dead end. [ENTER]");
         keys.nextLine();
         if (huh == 1){
-            System.out.println("Why did you come back down this path? [Enter]");
+            System.out.println("Why did you come back down this path? [ENTER]");
             keys.nextLine();
-            System.out.println("You stand there for a second, baffled by the fact that it's still a dead end. [Enter]");
+            System.out.println("You stand there for a second, baffled by the fact that it's still a dead end. [ENTER]");
             keys.nextLine();
-            System.out.println("As you stand there confused, you feel the ground start to shake. The ground cracks open, revealing a lava pit that you are now falling into. Ending 5: DEAD End. ");
+            System.out.println("As you stand there confused, you feel the ground start to shake. The ground cracks open, revealing a lava pit that you are now falling into. Ending 5: DEAD End. "); //ENDING
         }
         else{
-            System.out.println("Disappointed, you turn around and go back down the road. [Enter]");
+            System.out.println("Disappointed, you turn around and go back down the road. [ENTER]");
             huh++;
-            keys.nextInt();
+            keys.nextLine();
             volcanoStart();
         }
         return 0;
@@ -98,23 +98,24 @@ public class adventure {
 
     public static int volcanoCont1(){
             Scanner keys = new Scanner(System.in);
-            System.out.println("You decide to go left. [Enter]");
+            System.out.println("You decide to go left. [ENTER]");
             keys.nextLine();
-            System.out.println("As you continue down the path, you feel the ground start to shake. You look up to see the volcano starting to erupt! [Enter]");
+            System.out.println("As you continue down the path, you feel the ground start to shake. You look up to see the volcano starting to erupt! [ENTER]");
             keys.nextLine();
-            System.out.println("You panic, and start to run faster down the path. [Enter]");
+            System.out.println("You panic, and start to run faster down the path. [ENTER]");
             keys.nextLine();
             System.out.println("As you run, you look up to see a magma boulder falling from the sky at you. Looks like it's going far. Do you dodge: [1] Left, or [2] Right? ");
             choiceV2 = keys.nextInt();
             if (choiceV2 == 1){
-                System.out.println("You dodge to the left, but get hit by the boulder. You dodged right into it you fool. (injury +1) [Enter]");
+                System.out.println("You dodge to the left, but get hit by the boulder. You dodged right into it you fool. (injury +1) [ENTER]");
                 volcanoInjury++;
-                System.out.println("Although you are injured, you keep running. [Enter]");
+                keys.nextLine();
+                System.out.println("Although you are injured, you keep running. [ENTER]");
                 keys.nextLine();
                 volcanoCont2();
             }   
             if (choiceV2 == 2){
-                System.out.println("You skillfully dodge the falling boulder, and continue running down the path. [Enter]");
+                System.out.println("You skillfully dodge the falling boulder, and continue running down the path. [ENTER]");
                 keys.nextLine();
                 volcanoCont2();
             }
@@ -125,44 +126,44 @@ public class adventure {
         System.out.println("Yet again, you see another boulder fall from the sky. This one seems like it's falling short. Do you dodge: [1] Left, or [2] Right?");
         choiceV3 = keys.nextInt();
             if (choiceV3 == 1){
-                System.out.println("You see the boulder falling short and run away from it, avoiding it entirely. [Enter]");
+                System.out.println("You see the boulder falling short and run away from it, avoiding it entirely. [ENTER]");
                 keys.nextLine();
+                volcanoCont3();
             }
             if (choiceV3 == 2){
-                System.out.println("You see the boulder falling short and decide to give it a big hug, but it didn't share your feelings, deciding to crush you under it's weight. [Enter]");
+                System.out.println("You see the boulder falling short and decide to give it a big hug, but it didn't reciprocate your feelings, deciding to crush you under it's weight. (injury + 1) [ENTER]");
                 volcanoInjury++;
                 keys.nextLine();
+                volcanoCont3();
             }
         return 0;
     }
     public static int volcanoCont3(){
         Scanner keys = new Scanner(System.in);
-        System.out.println("You can sense the volcano calming down, but you have one more hurdle. [Enter]");
+        System.out.println("You can sense the volcano calming down, but you have one more hurdle. [ENTER]");
         keys.nextLine();
         System.out.println("You see one final boulder. It looks bigger than the rest. Do you dodge: [1] Left, or [2] Right?");
         choiceV4 = keys.nextInt();
             if (choiceV4 == 1){
-                System.out.println("You try to run to the left, but the boulder follows you. [Enter]");
+                System.out.println("You try to run to the left, but the boulder follows you. [ENTER]");
                 keys.nextLine();
-                System.out.println("You manage to jump out of the way before the boulder falls down, but the shockwave from it hitting the ground knocks you back into a wall. [Enter]");
+                System.out.println("You manage to jump out of the way before the boulder falls down, but the shockwave from it hitting the ground knocks you back into a wall. (injury + 1) [ENTER]");
                 volcanoInjury++;
                 keys.nextLine();
                 if (volcanoInjury == 3){
-                    System.out.println("As you hit the wall, you break your back, and are stuck there, unable to move. [Enter] ");
+                    System.out.println("As you hit the wall, you break your back, and are stuck there, unable to move. [ENTER] ");
                     keys.nextLine();
-                    System.out.println("A little while later, you succumb to your injuries. Ending 4: Rock Eater");
+                    System.out.println("A little while later, you succumb to your injuries. Ending 4: Rock Eater"); // ENDING
                     keys.nextLine();
                 }
-                else{
+                else if(volcanoInjury <= 2){
                     volcanoCont4();
                 }
             }
             if (choiceV4 == 2){
-                System.out.println("You dodge to the right, but the boulder seems to be falling right on top of you. [Enter]");
+                System.out.println("You dodge to the right, but the boulder seems to be falling right on top of you. [ENTER]");
                 keys.nextLine();
-                System.out.println("You unsheath your sword and prepare. When the boulder is about to fall on top of you, you cut it cleanly in half, both sides of it falling around you. [Enter]");
-                keys.nextLine();
-                System.out.println("You continue down the path. [Enter]");
+                System.out.println("You unsheath your sword and prepare. When the boulder is about to fall on top of you, you cut it cleanly in half, both sides of it falling around you. [ENTER]");
                 keys.nextLine();
                 volcanoCont4();
             }
@@ -171,6 +172,31 @@ public class adventure {
     }
 
     public static void volcanoCont4(){
+        Scanner keys = new Scanner(System.in);
+        System.out.println("With the volcano's eruption finished, you continue down the path. [ENTER]");
+        keys.nextLine();
+        System.out.println("After a little while of walking, you find yourself in front of a red temple like building. [ENTER]");
+        keys.nextLine();
+        System.out.println("You enter the building and look around. [ENTER]");
+        keys.nextLine();
+        System.out.println("You look straight ahead to see a pedestal with a sword sticking out of it. [ENTER]");
+        keys.nextLine();
+        if (volcanoInjury >= 2){
+            System.out.println("You stumble up the stairs and attempt to pull the sword out . . . [ENTER]");
+            keys.nextLine();
+            System.out.println(". . . but you fail, your strength not enough after getting hit by all the boulders. [ENTER]");
+            keys.nextLine();
+            System.out.println("You decide to head back, and try again another day. . . if you feel like it. Ending wtf: Big Ouch"); /// ENDING
+        }
+        else if (volcanoInjury <= 1){
+            System.out.println("You walk up the stair and attempt to pull the sword out . . . [ENTER]");
+            keys.nextLine();
+            System.out.println(". . . and you succeed, gloriously removing the sword from the pedestal with one clean movement. [ENTER]");
+            keys.nextLine();
+            System.out.println("You exit the temple and return back to the city, succeeding in collecting one of the legendary warrior pieces.");
+            keys.nextLine();
+            splitpaths();
+        }
 
     }
 
@@ -333,9 +359,6 @@ public class adventure {
         System.out.println("You get up and fix yourself, and now you have the shield on your left hand. [ENTER]");
         keys.nextLine();
         System.out.println("It is time to head back to the crossroads you said, but it will take a long due to how far you ventured in here. [ENTER]");
-
-
-
 
         return 0;
     }
