@@ -43,7 +43,7 @@ public class adventure {
             lakeStart();
         }
         if (choice2 == 3){
-            dragonStart();
+            beforedragonFight();
         }
         if (choice2 == 4){
             desertStart();
@@ -96,7 +96,7 @@ public class adventure {
             keys.nextLine();
             System.out.println("You stand there for a second, baffled by the fact that it's still a dead end. [ENTER]");
             keys.nextLine();
-            System.out.println("As you stand there confused, you feel the ground start to shake. The ground cracks open, revealing a lava pit that you are now falling into. Ending 5: DEAD End. "); //ENDING
+            System.out.println("As you stand there confused, you feel the ground start to shake. The ground cracks open, revealing a lava pit that you are now falling into. \n Ending 3/10: [DEAD End] "); //ENDING
         }
         else{
             System.out.println("Disappointed, you turn around and go back down the road. [ENTER]");
@@ -164,7 +164,7 @@ public class adventure {
                 if (volcanoInjury == 3){
                     System.out.println("As you hit the wall, you break your back, and are stuck there, unable to move. [ENTER] ");
                     keys.nextLine();
-                    System.out.println("A little while later, you succumb to your injuries. Ending 4: Rock Eater"); // ENDING
+                    System.out.println("A little while later, you succumb to your injuries. \n Ending 4/10: [Rock Eater] "); // ENDING
                     keys.nextLine();
                 }
                 else if(volcanoInjury <= 2){
@@ -197,7 +197,7 @@ public class adventure {
             keys.nextLine();
             System.out.println(". . . but you fail, your strength not enough after getting hit by all the boulders. [ENTER]");
             keys.nextLine();
-            System.out.println("You decide to head back, and try again another day. . . if you feel like it. Ending wtf: Big Ouch"); /// ENDING
+            System.out.println("You decide to head back, and try again another day. . . if you feel like it. \n Ending 5/10: [Big Ouch] "); /// ENDING
         }
         else if (volcanoInjury <= 1){
             System.out.println("You walk up the stair and attempt to pull the sword out . . . [ENTER]");
@@ -211,12 +211,6 @@ public class adventure {
 
     }
 
-    public static int dragonStart(){
-        Scanner keys = new Scanner(System.in);
-        System.out.println("dargon");
-        keys.nextLine();
-        return 0;
-    }
     public static int desertStart(){
         if (armor == 1){
             Scanner keys = new Scanner(System.in);
@@ -240,9 +234,9 @@ public class adventure {
             desertcont1();
         }
         if (choiceD1 == 2){
-            System.out.println("You decide to not go to the temple as you believe there are more treasures lurking around in your area.");
+            System.out.println("You decide to not go to the temple as you believe there are more treasures lurking around in your area. [ENTER]");
             keys.nextLine();
-            System.out.println("Unfortunately, your travels around the area has caused you to be de-hydrated due to the heat, which in turn leads you to your death. Great choice of action Hero. \n Ending 6: [Dehydration]");
+            System.out.println("Unfortunately, your travels around the area has caused you to be de-hydrated due to the heat, which in turn leads you to your death. Great choice of action Hero. \n Ending 6/10: [Dehydration]"); //ENDING
         }
         return 0;
     }
@@ -267,7 +261,9 @@ public class adventure {
         if (choiceD2 == 2){
             System.out.println("You decided to break the ground knowing the risk for breaking your legs as you land. [ENTER]"); 
             keys.nextLine();
-            System.out.println("You look down and see a TRAP! pressure plate waiting to be stepped on the ground. \n You were too late to move to the side and you explode instantly the moment you landed on the pressure plate. \n Ending 7: [metro-booming make it boom]\n \n ");
+            System.out.println("You look down and see a TRAP! pressure plate waiting to be stepped on the ground.");
+            keys.nextLine();
+            System.out.println("You were too late to move to the side and you explode instantly the moment you landed on the pressure plate. \n Ending 7/10: [metro-booming make it boom]\n \n "); //ENDING
         }
         return 0;
 
@@ -280,13 +276,13 @@ public class adventure {
         System.out.println("You assume one of these chests will have the treasure, which chest do you for first? [1] [2] [3] [4]");
         choiceD3 = keys.nextInt();
         if (choiceD3 == 1){
-            System.out.println("You open the chest on your left and uncover. . . Cobwebs, Dust, Pieces of ripped fabric and nothing more. Disappointing one to say.");
+            System.out.println("You open the chest on your left and uncover. . . Cobwebs, Dust, Pieces of ripped fabric and nothing more. Disappointing one to say. [ENTER]");
             desertcont2();
         }
         if (choiceD3 == 2){
-            System.out.println("You open the chest on your right and uncover. . . A small Dyllan Mouly plushie ready to screw you up. You exploded instantly on the spot. GG ");
+            System.out.println("You open the chest on your right and uncover. . . A small Dyllan Mouly plushie ready to screw you up. You exploded instantly on the spot. GG [ENTER] ");
             keys.nextLine();
-            System.out.println("Ending 8: [get pernked asshat lol by: Dyllan Mouly]");
+            System.out.println("Ending 8/10: [get pernked lol by: Dyllan Mouly] "); //ENDING
         }
         if (choiceD3 == 3){
             System.out.println("You open the chest infront of you and uncover. . . A piece of paper, sticks, a small bone and a broken rod. Another dentrimented chest. Lets try again. [ENTER]");
@@ -356,7 +352,7 @@ public class adventure {
             keys.nextLine();
             System.out.println("Such time has passed and you lost track of time, but your determination to find something atleast when the walking is done burns evermore greater. [ENTER]");
             keys.nextLine();
-            System.out.println("Ending: ??? [See you on the other side]"); //ENDING
+            System.out.println("Ending: ??? [See you on the other side] "); //ENDING
         }
         return 0;
     }
@@ -379,7 +375,7 @@ public class adventure {
         keys.nextLine();
         System.out.println("The whole place starts to rumble and shaking violently as its about to collapse! [ENTER]");
         keys.nextLine();
-        System.out.println("[  youre shitting with me right now ._.  ] as you said to yourself, but no time for that you began to run towards the mushroom. [ENTER]");
+        System.out.println("[  youre kidding me right now ._.  ] as you said to yourself, but no time for that you began to run towards the mushroom. [ENTER]");
         keys.nextLine();
         System.out.println("You jump infront of the mushroom and you suddenly get boosted up very high in the sky, the gates from the surface were also opened but were rapidly closing. [ENTER]");
         keys.nextLine();
@@ -387,7 +383,7 @@ public class adventure {
         keys.nextLine();
         System.out.println("You get up and fix yourself, and now you have the shield on your left hand. [ENTER]");
         keys.nextLine();
-        System.out.println("It is time to head back to the crossroads you said, but it will take a long due to how far you ventured in here. [ENTER]");
+        System.out.println("It is time to head back t o the crossroads you said, but it will take a long due to how far you ventured in here. [ENTER]");
         shield++;
 
         return 0;
