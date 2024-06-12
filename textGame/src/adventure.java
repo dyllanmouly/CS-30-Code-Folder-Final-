@@ -207,6 +207,13 @@ public class adventure {
         return 0;
     }
     public static int desertStart(){
+        if (armor == 1){
+            Scanner keys = new Scanner(System.in);
+            System.out.println("For some reason, you went back to the desert despite already having the armor. [ENTER]");
+            keys.nextLine();
+            System.out.println("The heat is getting unbearable for you to deal with again. So you head back to the crossroads. [ENTER]");
+            splitpaths();
+        }
         Scanner keys = new Scanner(System.in);
         System.out.println("You decided to go West and find yourself in the Desert. [ENTER]");
         keys.nextLine();
@@ -278,6 +285,7 @@ public class adventure {
             System.out.println("You open the chest behind you and uncover. . . The Rock Armor! This is the armor piece that the king was talking about. [ENTER]");
             keys.nextLine();
             System.out.println("You grabbed the armor piece and climbed yourself out of the hole, and out towards the crossroads to contine your adventure.");
+            armor++;
             splitpaths();
         }
         return 0;
@@ -286,6 +294,15 @@ public class adventure {
 
     public static int lakeStart()
     {
+        if (shield == 1){
+            Scanner keys = new Scanner(System.in);
+            System.out.println("For some reason, you went back into the lakes again. [ENTER]");
+            keys.nextLine();
+            System.out.println("You wonder why you came back here again since you already got the shield. You decided to go back to the crossroads. Time well spent. [ENTER]");
+            keys.nextLine();
+            
+            splitpaths();
+        }
         Scanner keys = new Scanner(System.in);
         System.out.println("You venture yourself towards the lakes as told by the king. Somewhere around here, there lies the [Water Shield] as the king foretold. [ENTER]");
         keys.nextLine();
@@ -296,6 +313,7 @@ public class adventure {
         System.out.println("You feel something hit your feet, you stop and think if you should grab it. Do you? [1] [2]");
         choiceL1 = keys.nextInt();
         if (choiceL1 == 1){
+            System.out.println("");
             System.out.println("You crouched down to grab whatever it is underwater, you feel a button and you tap on it. . . [ENTER]");
             keys.nextLine();
             System.out.println("You hear the ground rumbling and as such, you stay on guard and look around your surroundings. [ENTER]");
@@ -359,6 +377,7 @@ public class adventure {
         System.out.println("You get up and fix yourself, and now you have the shield on your left hand. [ENTER]");
         keys.nextLine();
         System.out.println("It is time to head back to the crossroads you said, but it will take a long due to how far you ventured in here. [ENTER]");
+        shield++;
 
         return 0;
     }
@@ -370,26 +389,14 @@ public class adventure {
         Scanner keys = new Scanner(System.in);
         System.out.println("You arrive at the dragons gate--feeling pumped you then stop yourself just to make sure if you are fully equipped.");
         keys.nextLine();
-
-        System.out.println("You are currently equipped with:" + CurrentlyEquippedList + "\n With these items, do you feel ready to fight and slay the dragon? \n (You cannot go back, unless you want to be executed for being a coward). [1]");
-        keys.nextLine();
-        System.out.println("Very well, you prepare yourself as you open death doors of the dragon. From here on out, you feel courageous, a warrior who will save the Kingdom of Pernk. \n You feel Dragon-Hearted.");
+        if (armor == 1 || shield == 1 || sword == 1){
+            System.out.println("You are fully equipped with everything. You are confident you can take the dragon down with ease.");
+        }
     }
     
     public void dragonFight()
     {
         Scanner keys = new Scanner(System.in);
-        if (CurrentlyEquippedList == 3){
-            System.out.println("You enter the Dragon's Den and begun your battle. You took hard hits and did the same to the dragon. \n You moved swiftly to dodge the dragons attack and attacked it from weak areas. \n Finally, the dragon was heavily injured and tired and so were you, so you took this one chance and. . . \n Slayed the dragon ocne and for all! [Enter]");
-            keys.nextLine();
-            System.out.println("Pernk Badge achieved: [Pernk's Greatest Hero]");
-    
-            
-        }
-        else{
-            System.out.println("You enter the Dragon's Den and begun your battle. You took hard hits and did the same to the dragon. \n You moved swiftly to dodge the dragons attack and attacked it from weak areas. \n Finally, the dragon was heavily injured and tired and so were you, so you took this one chance and. . . \n Died in a gruesome death in the arena. [Enter]");
-            
-        }
-        
+
     }
 }
