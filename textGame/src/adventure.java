@@ -58,6 +58,16 @@ public class adventure {
 
     public static int volcanoStart(){
         Scanner keys = new Scanner(System.in);
+        if (sword == 1){
+            System.out.println("You decide to head north, and you find yourself standing at the base of the Volcano. [ENTER]");
+            keys.nextLine();
+            System.out.println(". . . but you shouldn't be here right now. [ENTER]");
+            keys.nextLine();
+            System.out.println("You have a whole kingdom to save, there's no time to sightsee. [ENTER]");
+            keys.nextLine();
+            splitpaths();;
+        }
+        else if (sword == 0 ){
         System.out.println("You decide to head north, and you find yourself standing at the base of the Volcano. [ENTER]");
         keys.nextLine();
         System.out.println("You try to recall the King's words, and remember that the [Legendary Sword of Flame] is located here. [ENTER]");
@@ -72,7 +82,8 @@ public class adventure {
             if (choiceV1 == 2){
                 volcanoCont1alt();
             }
-        return 0;
+    }
+    return 0;
     }
     public static int volcanoCont1alt(){
         Scanner keys = new Scanner(System.in);
