@@ -7,6 +7,7 @@ public class adventure {
     static int volcanoInjury, huh, choiceV1, choiceV2, choiceV3, choiceV4; //volcano ints
     static int choiceD1, choiceD2, choiceD3; //desert ints
     static int choiceL1, choiceL2, choiceL3; //Lake ints
+    static int beforeDchoice1, beforeDchoice2;
     static int itemsequipped, CurrentlyEquippedList, itemsbag;
     static int sword, shield, armor;
 
@@ -391,19 +392,38 @@ public class adventure {
 
 
 
-    public void beforedragonFight()
+    public static int beforedragonFight()
     {
         Scanner keys = new Scanner(System.in);
-        System.out.println("You arrive at the dragons gate--feeling pumped you then stop yourself just to make sure if you are fully equipped.");
+        System.out.println("You arrive at the dragons gate--feeling pumped you then stop yourself just to make sure if you are fully equipped. [ENTER]");
         keys.nextLine();
         if (armor == 1 || shield == 1 || sword == 1){
-            System.out.println("You are fully equipped with everything. You are confident you can take the dragon down with ease.");
+            System.out.println("");
+            System.out.println("You are fully equipped with everything. You are confident you can take the dragon down with ease. [ENTER]");
+            keys.nextLine();
+            System.out.println("Do you wish to proceed and save the Kingdom of Pernk once and for all? [1 Proceed] [2 ??????]");
+            beforeDchoice1 = keys.nextInt();
+            if (beforeDchoice1 == 1){
+                System.out.println("");
+                System.out.println("You proceeded through the gates of the dragon. You opened the gates and there it is. The Kingdom's Dragon that was terrorizing the lands for years to come. [ENTER]");
+                keys.nextLine();
+                System.out.println("Goodluck.");
+                dragonFight();
+            }
         }
+        if (armor < 1 || shield < 1 || sword < 1 && armor == 1 || shield < 1 || sword == 1 && armor < 1 || sword < 1 || shield == 1 && armor == 1){
+            System.out.println("");
+            System.out.println("You decided to go straigh towards the Dragon's gate with missing equipment feeling very confident, As if this is creative mode.");
+            keys.nextLine();
+            System.out.println("You proceeded through the gates of the dragon feeling confident you can defeat it with missing equipment. I bid you goodluck Hero. [ENTER]");
+            dragonFight();
+        }
+        return 0;
     }
-    
-    public void dragonFight()
+    public static int dragonFight()
     {
         Scanner keys = new Scanner(System.in);
+        return 0;
 
     }
 }
