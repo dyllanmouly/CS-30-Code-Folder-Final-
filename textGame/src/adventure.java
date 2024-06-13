@@ -7,9 +7,9 @@ public class adventure {
     static int volcanoInjury, huh, choiceV1, choiceV2, choiceV3, choiceV4; //volcano ints
     static int choiceD1, choiceD2, choiceD3; //desert ints
     static int choiceL1, choiceL2, choiceL3; //Lake ints
-    static int beforeDchoice1, beforeDchoice2;
-    static int itemsequipped, CurrentlyEquippedList, itemsbag;
+    static int beforeDchoice1, beforeDchoice2; //dragon fight ints
     static int sword, shield, armor;
+    static ArrayList<String> equipmentList = new ArrayList<String>();
 
     public static int kingsCall(){
         Scanner keys = new Scanner(System.in);
@@ -19,7 +19,7 @@ public class adventure {
         keys.nextLine();
         System.out.println("King: 'Hello adventurer!' \n      'I have called you here because there is a great evil in our lands.' \n      'This evil is a powerful dragon who has awoken recently.' \n      'You will have to find the 3 legendary warrior pieces to be able to defeat him.' \n      'However, and these pieces are scattered across the land.' [Enter]");
         keys.nextLine();
-        System.out.println("King: 'You need to find the Legendary Sword of Flame, hidden in the volcano up north.' \n      'The Shield of Water, hidden in the deep lake to the east.' \n      'And the Rock Armor, hidden in the desert to the west.' [Enter]");
+        System.out.println("King: 'You need to find the Legendary Sword of Flame, hidden in the volcano up north.' \n      'The Shield of the Lake, hidden in the deep lake to the east.' \n      'And the Rock Armor, hidden in the desert to the west.' [Enter]");
         keys.nextLine();
         System.out.println("King: 'The Dragon's Lair is to the south, you'll have to go there after collecting all the warrior pieces.' \n      'I wish you luck brave warrior, please save our kingdom!' [Enter]");
         keys.nextLine();
@@ -30,12 +30,22 @@ public class adventure {
     }
 
     public static int splitpaths(){
+        
         Scanner keys = new Scanner(System.in);
+        if (sword == 1){
+            equipmentList.add("Legendary Sword of Flame");
+        }
+        if (shield == 1){
+            equipmentList.add("Shield of the Lake");
+        }
+        if (armor == 1){
+            equipmentList.add("Rock Armor");
+        }
         System.out.println("You stumble upon the crossroads. [Enter]");
         keys.nextLine();
         System.out.println("This is where you will take your first step on your adventure. [Enter]");
         keys.nextLine();
-        System.out.println("You can go 4 ways. [1] North, [2] East [3] South, [4] West. Which will you choose? ");
+        System.out.println("You can go 4 ways. [1] North, [2] East [3] South, [4] West. Which will you choose? (You can also check your inventory [5]) ");
         choice2 = keys.nextInt();
         if (choice2 == 1){
             volcanoStart();
@@ -48,6 +58,12 @@ public class adventure {
         }
         if (choice2 == 4){
             desertStart();
+        }
+        if(choice2 == 5){
+            System.out.println(equipmentList + " [ENTER]");
+            keys.nextLine();
+            System.out.println("");
+            splitpaths();
         }
         else{
             System.out.println("You got confused and ended up walking in a circle. Try again? [Enter]");
@@ -308,7 +324,6 @@ public class adventure {
             keys.nextLine();
             System.out.println("You wonder why you came back here again since you already got the shield. You decided to go back to the crossroads. Time well spent. [ENTER]");
             keys.nextLine();
-            
             splitpaths();
         }
         Scanner keys = new Scanner(System.in);
@@ -323,6 +338,7 @@ public class adventure {
         if (choiceL1 == 1){
             System.out.println("");
             System.out.println("You crouched down to grab whatever it is underwater, you feel a button and you tap on it. . . [ENTER]");
+            System.out.println("");
             keys.nextLine();
             System.out.println("You hear the ground rumbling and as such, you stay on guard and look around your surroundings. [ENTER]");
             keys.nextLine();
@@ -384,13 +400,11 @@ public class adventure {
         keys.nextLine();
         System.out.println("You get up and fix yourself, and now you have the shield on your left hand. [ENTER]");
         keys.nextLine();
-        System.out.println("It is time to head back t o the crossroads you said, but it will take a long due to how far you ventured in here. [ENTER]");
+        System.out.println("It is time to head back to the crossroads you said, but it will take a long due to how far you ventured in here. [ENTER]");
         shield++;
 
         return 0;
     }
-
-
 
     public static int beforedragonFight()
     {
