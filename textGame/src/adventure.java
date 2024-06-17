@@ -8,8 +8,12 @@ public class adventure {
     static int choiceD1, choiceD2, choiceD3; //desert ints
     static int choiceL1, choiceL2, choiceL3; //Lake ints
     static int beforeDchoice1, beforeDchoice2; //dragon fight ints
+    static int Dragonchoice1, Dragonchoice2, Dragonchoice3, Dragonchoice4, Dragonchoice5, Dragonchoice6;
     static int sword, shield, armor;
+    
     static ArrayList<String> equipmentList = new ArrayList<String>();
+
+//ADD empty prints for breaking up text
 
     public static int kingsCall(){
         Scanner keys = new Scanner(System.in);
@@ -135,7 +139,6 @@ public class adventure {
             System.out.println("As you run, you look up to see a magma boulder falling from the sky at you. Looks like it's going far. Do you dodge: [1] Left, or [2] Right? ");
             choiceV2 = keys.nextInt();
             if (choiceV2 == 1){
-                System.out.println("");
                 System.out.println("You dodge to the left, but get hit by the boulder. You dodged right into it you fool. (injury +1) [ENTER]");
                 volcanoInjury++;
                 keys.nextLine();
@@ -144,7 +147,6 @@ public class adventure {
                 volcanoCont2();
             }   
             if (choiceV2 == 2){
-                System.out.println("");
                 System.out.println("You skillfully dodge the falling boulder, and continue running down the path. [ENTER]");
                 keys.nextLine();
                 volcanoCont2();
@@ -156,13 +158,11 @@ public class adventure {
         System.out.println("Yet again, you see another boulder fall from the sky. This one seems like it's falling short. Do you dodge: [1] Left, or [2] Right?");
         choiceV3 = keys.nextInt();
             if (choiceV3 == 1){
-                System.out.println("");
                 System.out.println("You see the boulder falling short and run away from it, avoiding it entirely. [ENTER]");
                 keys.nextLine();
                 volcanoCont3();
             }
             if (choiceV3 == 2){
-                System.out.println("");
                 System.out.println("You see the boulder falling short and decide to give it a big hug, but it didn't reciprocate your feelings, deciding to crush you under it's weight. (injury + 1) [ENTER]");
                 volcanoInjury++;
                 keys.nextLine();
@@ -177,7 +177,6 @@ public class adventure {
         System.out.println("You see one final boulder. It looks bigger than the rest. Do you dodge: [1] Left, or [2] Right?");
         choiceV4 = keys.nextInt();
             if (choiceV4 == 1){
-                System.out.println("");
                 System.out.println("You try to run to the left, but the boulder follows you. [ENTER]");
                 keys.nextLine();
                 System.out.println("You manage to jump out of the way before the boulder falls down, but the shockwave from it hitting the ground knocks you back into a wall. (injury + 1) [ENTER]");
@@ -194,7 +193,6 @@ public class adventure {
                 }
             }
             if (choiceV4 == 2){
-                System.out.println("");
                 System.out.println("You dodge to the right, but the boulder seems to be falling right on top of you. [ENTER]");
                 keys.nextLine();
                 System.out.println("You unsheath your sword and prepare. When the boulder is about to fall on top of you, you cut it cleanly in half, both sides of it falling around you. [ENTER]");
@@ -443,6 +441,41 @@ public class adventure {
     public static int dragonFight()
     {
         Scanner keys = new Scanner(System.in);
+        System.out.println("");
+        if (armor == 1 || shield == 1 || sword == 1){
+            System.out.println("You charge towards the dragon that is waiting at the middle, it suddenly leaps up in the air and does its firebreath at you. [ENTER]");
+            keys.nextLine();
+            System.out.println("Do you block or dodge? [1] BLOCK [2] DODGE");
+            Dragonchoice1 = keys.nextInt();
+            if (Dragonchoice1 == 1){
+                System.out.println("");
+                System.out.println("You decided to block the attack, but because of that your shield can only take 1 more fire hit before it breaks. [ENTER]");
+                keys.nextLine();
+                System.out.println("The dragon swiftly leaps down to the ground towards you. [ENTER]");
+                keys.nextLine();
+                System.out.println("Do you dodge or jump? [1] DODGE [2] JUMP");
+                Dragonchoice3 = keys.nextInt();
+            }
+            Dragonchoice2 = keys.nextInt();
+            if (Dragonchoice2 == 2){
+                System.out.println("");
+                System.out.println("You decided to dodge the attack but because of the heat, your armor has been partially melted off. [ENTER]");
+                keys.nextLine();
+                System.out.println("The dragon charges another firebreath attack and he launches it towards you. [ENTER]");
+                keys.nextLine();
+                System.out.println("The attack seems way bigger than last time and you have no choice but to block the attacl. [ENTER]");
+                keys.nextLine();
+                System.out.println("You block the attack, but with the shield rapidly melting you have to make a quick decision. [ENTER]");
+                keys.nextLine();
+                System.out.println("You move quickly to the side out from the fire attack but it starts to follow you. [ENTR]");
+                keys.nextLine();
+                System.out.println("You run and find cover until you can form a plan to defeat the dragon once and for all. [ENTER]");
+                keys.nextLine();
+                System.out.println("The dragon swiftly leaps down to the ground towards you while");
+            }
+
+            //ytrrytr
+        }
         return 0;
 
     }
