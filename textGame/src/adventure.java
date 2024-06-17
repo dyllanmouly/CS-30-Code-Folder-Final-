@@ -135,6 +135,7 @@ public class adventure {
             System.out.println("As you run, you look up to see a magma boulder falling from the sky at you. Looks like it's going far. Do you dodge: [1] Left, or [2] Right? ");
             choiceV2 = keys.nextInt();
             if (choiceV2 == 1){
+                System.out.println("");
                 System.out.println("You dodge to the left, but get hit by the boulder. You dodged right into it you fool. (injury +1) [ENTER]");
                 volcanoInjury++;
                 keys.nextLine();
@@ -143,6 +144,7 @@ public class adventure {
                 volcanoCont2();
             }   
             if (choiceV2 == 2){
+                System.out.println("");
                 System.out.println("You skillfully dodge the falling boulder, and continue running down the path. [ENTER]");
                 keys.nextLine();
                 volcanoCont2();
@@ -154,11 +156,13 @@ public class adventure {
         System.out.println("Yet again, you see another boulder fall from the sky. This one seems like it's falling short. Do you dodge: [1] Left, or [2] Right?");
         choiceV3 = keys.nextInt();
             if (choiceV3 == 1){
+                System.out.println("");
                 System.out.println("You see the boulder falling short and run away from it, avoiding it entirely. [ENTER]");
                 keys.nextLine();
                 volcanoCont3();
             }
             if (choiceV3 == 2){
+                System.out.println("");
                 System.out.println("You see the boulder falling short and decide to give it a big hug, but it didn't reciprocate your feelings, deciding to crush you under it's weight. (injury + 1) [ENTER]");
                 volcanoInjury++;
                 keys.nextLine();
@@ -173,6 +177,7 @@ public class adventure {
         System.out.println("You see one final boulder. It looks bigger than the rest. Do you dodge: [1] Left, or [2] Right?");
         choiceV4 = keys.nextInt();
             if (choiceV4 == 1){
+                System.out.println("");
                 System.out.println("You try to run to the left, but the boulder follows you. [ENTER]");
                 keys.nextLine();
                 System.out.println("You manage to jump out of the way before the boulder falls down, but the shockwave from it hitting the ground knocks you back into a wall. (injury + 1) [ENTER]");
@@ -189,6 +194,7 @@ public class adventure {
                 }
             }
             if (choiceV4 == 2){
+                System.out.println("");
                 System.out.println("You dodge to the right, but the boulder seems to be falling right on top of you. [ENTER]");
                 keys.nextLine();
                 System.out.println("You unsheath your sword and prepare. When the boulder is about to fall on top of you, you cut it cleanly in half, both sides of it falling around you. [ENTER]");
