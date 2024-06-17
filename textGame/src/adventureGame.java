@@ -20,30 +20,8 @@ public class adventureGame {
             System.out.println("You decided to stay in bed. You thought that fighting was too much work, and you needed your beauty sleep. [ENTER]");
             keys.nextLine();
             System.out.println("Ending 10/10: [Sleepy]"); //ENDING
+            System.exit(0);
         }
     }
-    // public static int playersstuff()
-    // {
-    //     adventure run = new adventure();
 
-    //     if (itemsequipped == 3){
-    //         Scanner keys = new Scanner(System.in);
-    //         System.out.println("You were fully equipped and after a long fight, you have slain the dragon. \n The Townspeople have commended your actions and you are awarded a title named: \n [Valiant Hero].");
-    //         keys.nextLine();
-    //         System.out.println("Ending 1/10: [Hero of Pernk]");
-    //         run.dragonFight();
-
-
-    
-
-    //     }
-    //     else if (itemsequipped < 3){
-    //         Scanner keys = new Scanner(System.in);
-    //         System.out.println("You were not fully equipped; but decided to go to battle anyway. \n You fought bravely but ultimately lost and because of that... \n The townspeople and their village are destroyed.");
-    //         keys.nextLine();
-    //         System.out.println("Ending 2/10: [Fallen Warrior]");
-    //         run.dragonFight();
-    //     }
-    //     return CurrentlyEquippedList;
-    // }
 }
