@@ -461,15 +461,15 @@ public class adventure {
             Dragonchoice1 = keys.nextInt();
             if (Dragonchoice1 == 1){
                 System.out.println("");
-                System.out.println("You decided to block the attack, but because of that your shield can only take 1 more fire hit before it breaks. [ENTER]");
+                System.out.println("You block the dragon's fire breath with your shield successfully. [ENTER]");
                 keys.nextLine();
-                System.out.println("The dragon swiftly leaps down to the ground towards you. [ENTER]");
+                System.out.println("However, when the fire stops, the dragon is nowhere to be seen. [ENTER]");
                 keys.nextLine();
-                System.out.println("Do you dodge or jump? [1] DODGE [2] JUMP");
-                Dragonchoice3 = keys.nextInt();
+                System.out.println("You look around panicked, and when you look up, you see the dragon's foot rapidly approaching you. [ENTER]");
+                keys.nextLine();
+                System.out.println("Before you can react, you are crushed by the dragon. Ending 2/10: [Failed Hero]");
             }
-            Dragonchoice2 = keys.nextInt();
-            if (Dragonchoice2 == 2){
+            if (Dragonchoice1 == 2){
                 System.out.println("");
                 System.out.println("You decided to dodge the attack but because of the heat, your armor has been partially melted off. [ENTER]");
                 keys.nextLine();
