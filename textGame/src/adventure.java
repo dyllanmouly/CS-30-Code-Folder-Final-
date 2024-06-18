@@ -7,12 +7,11 @@ public class adventure {
     static int volcanoInjury, huh, choiceV1, choiceV2, choiceV3, choiceV4; //volcano ints
     static int choiceD1, choiceD2, choiceD3; //desert ints
     static int choiceL1, choiceL2, choiceL3; //Lake ints
-    static int beforeDchoice1, beforeDchoice2; //dragon fight ints
-    static int Dragonchoice1, Dragonchoice2, Dragonchoice3, Dragonchoice4, Dragonchoice5, Dragonchoice6;
-    static int sword, shield, armor;
-    static ArrayList<String> equipmentList = new ArrayList<String>();
+    static int beforeDchoice1, beforeDchoice2, beforeDchoiceMissing; //dragon fight ints
+    static int Dragonchoice1, Dragonchoice2, Dragonchoice3, Dragonchoice4, Dragonchoice5, Dragonchoice6; //ints for dragon fight
+    static int sword, shield, armor; // ints for equipment
+    static ArrayList<String> equipmentList = new ArrayList<String>(); // item bag basically
 
-//ADD empty prints for breaking up text
 
     public static int kingsCall(){
         Scanner keys = new Scanner(System.in);
@@ -33,7 +32,6 @@ public class adventure {
     }
 
     public static int splitpaths(){
-        
         Scanner keys = new Scanner(System.in);
         if (sword == 1){
             equipmentList.add("Legendary Sword of Flame");
@@ -44,6 +42,7 @@ public class adventure {
         if (armor == 1){
             equipmentList.add("Rock Armor");
         }
+        System.err.println("");
         System.out.println("You stumble upon the crossroads. [Enter]");
         keys.nextLine();
         System.out.println("This is where you will take your first step on your adventure. [Enter]");
@@ -202,6 +201,7 @@ public class adventure {
             if (choiceV4 == 2){
                 System.out.println("You dodge to the right, but the boulder seems to be falling right on top of you. [ENTER]");
                 keys.nextLine();
+                System.out.println("");
                 System.out.println("You unsheath your sword and prepare. When the boulder is about to fall on top of you, you cut it cleanly in half, both sides of it falling around you. [ENTER]");
                 keys.nextLine();
                 volcanoCont4();
@@ -234,6 +234,7 @@ public class adventure {
             System.out.println(". . . and you succeed, gloriously removing the sword from the pedestal with one clean movement. [ENTER]");
             keys.nextLine();
             System.out.println("You exit the temple and return back to the city, succeeding in collecting one of the legendary warrior pieces.");
+            sword++;
             keys.nextLine();
             splitpaths();
         }
@@ -257,7 +258,7 @@ public class adventure {
         keys.nextLine();
         System.out.println("From afar, you see a temple and you are curious to see what treasures lies within. [ENTER]");
         keys.nextLine();
-        System.out.println("Do you plan to go towards the temple? or keep searching around your area. [1] [2]");
+        System.out.println("Do you plan to go towards the temple? or keep searching around your area. [1 Go to the Temple] [2 Search around]");
         choiceD1 = keys.nextInt();
         if (choiceD1 == 1){
             desertcont1();
@@ -280,7 +281,7 @@ public class adventure {
         keys.nextLine();
         System.out.println("The middle colored group stands out the most to you. It looks raggid, cracked, and has holes, which at a closer look, leads into something deeper below. [ENTER]");
         keys.nextLine();
-        System.out.println("It seems that you need to break the ground as it will unvail more treasures, do you break the block? [1] [2]");
+        System.out.println("It seems that you need to break the ground as it will unvail more treasures. You feel a bad omen when you stand on the middle block. Do you break it, or do you stand to the side? [1 Break the Middle] [2 Stand to the Side]");
         choiceD2 = keys.nextInt();
         if (choiceD2 == 1){
             System.out.println("You decided to break the ground knowing the risk for breaking your legs as you land. [ENTER]"); 
@@ -348,7 +349,7 @@ public class adventure {
         keys.nextLine();
         System.out.println("You venture deep into the lakes as the water slowly rises towards your waist as you explore more further. [ENTER]");
         keys.nextLine();
-        System.out.println("You feel something hit your feet, you stop and think if you should grab it. Do you? [1] [2]");
+        System.out.println("You feel something hit your feet, you stop and think if you should grab it. Do you? [1 Yes] [2 No]");
         choiceL1 = keys.nextInt();
         if (choiceL1 == 1){
             System.out.println("");
@@ -431,22 +432,42 @@ public class adventure {
             System.out.println("");
             System.out.println("You are fully equipped with everything. You are confident you can take the dragon down with ease. [ENTER]");
             keys.nextLine();
-            System.out.println("Do you wish to proceed and save the Kingdom of Pernk once and for all? [1 Proceed] [2 ??????]");
+            System.out.println("Do you wish to proceed and save the Kingdom of Pernk once and for all? [1 Proceed] [2 Nah]");
             beforeDchoice1 = keys.nextInt();
             if (beforeDchoice1 == 1){
                 System.out.println("");
                 System.out.println("You proceeded through the gates of the dragon. You opened the gates and there it is. The Kingdom's Dragon that was terrorizing the lands for years to come. [ENTER]");
                 keys.nextLine();
-                System.out.println("Goodluck.");
+                System.out.println("Goodluck. [ENTER]");
+                keys.nextLine();
                 dragonFight();
+            }
+            if (beforeDchoice1 == 2){
+                System.out.println("");
+                System.out.println("When you look at the front gate to the dragon's lair, you are filled with a feeling of fear. [ENTER]");
+                keys.nextLine();
+                System.out.println("You decide that slaying this dragon really isn't worth it at all and ran out of there with your tail tucked between your legs. \nEnding 9/10: [The Cowards Way Out] ");
+                System.exit(0);
             }
         }
         if (armor < 1 || shield < 1 || sword < 1 && armor == 1 || shield < 1 || sword == 1 && armor < 1 || sword < 1 || shield == 1 && armor == 1){
-            System.out.println("");
-            System.out.println("You decided to go straigh towards the Dragon's gate with missing equipment feeling very confident, As if this is creative mode.");
+            System.out.println("You decided to go straight towards the Dragon's gate with missing equipment feeling very confident, As if this is creative mode.");
             keys.nextLine();
+            System.out.println("Are you sure you want to go ahead? [1 Yes] [2 No]");
+            beforeDchoiceMissing = keys.nextInt();
+            if (beforeDchoiceMissing == 1){
             System.out.println("You proceeded through the gates of the dragon feeling confident you can defeat it with missing equipment. I bid you goodluck Hero. [ENTER]");
-            dragonFight();
+            keys.nextLine();
+            System.out.println("You open the gate, feeling pumped up, but before you can even react, you get turned to ash by the dragon's fire breath. [ENTER]");
+            keys.nextLine();
+            System.out.println("Turns out that the dragon was just streching. Good job hero. \nEnding 2/10; [Failed Hero]");
+            System.exit(0);
+            }
+            if (beforeDchoiceMissing == 2){
+                System.out.println("You decide that going to fight the dragon unprepared is probably a bad idea. Good thinking. [ENTER]");
+                keys.nextLine();
+                splitpaths();
+            }
         }
         return 0;
     }
@@ -467,7 +488,8 @@ public class adventure {
                 keys.nextLine();
                 System.out.println("You look around panicked, and when you look up, you see the dragon's foot rapidly approaching you. [ENTER]");
                 keys.nextLine();
-                System.out.println("Before you can react, you are crushed by the dragon. Ending 2/10: [Failed Hero]");
+                System.out.println("Before you can react, you are crushed by the dragon. \nEnding 2/10: [Failed Hero]");
+                System.exit(0);
             }
             if (Dragonchoice1 == 2){
                 System.out.println("");
