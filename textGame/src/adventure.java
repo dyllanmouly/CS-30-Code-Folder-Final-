@@ -534,12 +534,10 @@ public class adventure {
                System.exit(0);
             }
 
-
             if (Dragonchoice3 == 1){
                 System.out.println("");
-                System.out.println("You decided to parry the dragons rush attack and stun it, but with the cost of your shield being broken. [ENTER]");
+                System.out.println("You decided to parry the dragons rush attack and stun it, but with the cost of your shield being broken. [Shield -1] [ENTER]");
                 shield--;
-                System.out.println(shield + "You lost your shield! -dyllan mouly [ENTER]");
                 keys.nextLine();
                 System.out.println("While it's stunned, you quickly scale the dragon and reach it's head to deliver a killing blow. [ENTER]");
                 keys.nextLine();
@@ -549,9 +547,8 @@ public class adventure {
                 keys.nextLine();
                 System.out.println("The dragon roars in pain and because of that, it falls fast towards to the ground, while you were still hanging on for dear life. [ENTER]");
                 keys.nextLine();
-                System.out.println("The dragon heavily crashes into the ground, leaving thick smoke and debris going everywhere. Because of that, the impact greated affected your armor. [ENTER]");
+                System.out.println("The dragon heavily crashes into the ground, leaving thick smoke and debris going everywhere. Because of that, the impact greated affected your armor. [Armor -1] [ENTER]");
                 armor--;
-                System.out.println("YOU REAP WHAT YOU SOW, YOUR ARMOR MAKES ME G-  -jacob rivera [ENTER]");
                 keys.nextLine();
                 System.out.println("...");
                 keys.nextLine();
@@ -586,43 +583,44 @@ public class adventure {
                 keys.nextLine();
                 System.out.println("The dragon quickly turns around and rushs you again, but this time you take a stance and prepare yourself. [ENTER]");
                 keys.nextLine();
-                System.out.println("The dragon swiftly goes to your directiom, but you jump up and land ontop of its head. [ENTER]");
+                System.out.println("The dragon swiftly runs in your direction, but you jump up and land ontop of its head. [ENTER]");
                 keys.nextLine();
-                System.out.println("You then grab its horns to control its movement leaving the dragon somewhat able to control itself. [ENTER]");
+                System.out.println("You then grab its horns to control its movement leaving the dragon somewhat unable to control itself. [ENTER]");
                 keys.nextLine();
                 System.out.println("You then control the dragon to ram and slide itself through the walls hard while you take cover from the debris. [ENTER]");
                 keys.nextLine();
-                System.out.println("After that, you control its head to aim down to the ground so it can crash land. [ENTER]");
+                System.out.println("The dragon begins to fly into the air, and it is attempting to get you off from its head by shaking and moving violently. Because of that, you are about to fall off! [ENTER]");
                 keys.nextLine();
-                System.out.println("The dragon is attempting to get you off from its head by shaking and moving violently, because of it you are about to fall off! [ENTER]");
-                keys.nextLine();
-                System.out.println("You can use your sword and stab it through the head for steady grip, or keep hanging onto the horns. [1] [2]");
+                System.out.println("You can use your sword and stab it through the head for steady grip, or keep hanging onto the horns. [1 Stab] [2 Hang on]");
                 Dragonchoice4 = keys.nextInt();
             }
+            
             if (Dragonchoice4 == 1){
-                System.out.println("");
-                System.out.println("You chose to stab your sword through the head of the dragon for more quick to try steer yourself into a much safe landing environment. [ENTER]");
+                System.out.println("You stab into the dragons head to try and get a good grip. [ENTER]");
                 keys.nextLine();
-                System.out.println("A smear moment later, at the last second you jumped off from the dragon and landed into a safe environement instead of the dragon. [ENTER]");
+                System.out.println("As you do this, the dragon begins to fall from the sky rapidly. [ENTER]");
                 keys.nextLine();
-                System.out.println("Before your death, you wondered if the dragon had perished from the crash, hoping that it did. [ENTER]");
+                System.out.println("You hold on for dear life as it plummets from the sky. [ENTER]");
                 keys.nextLine();
-                System.out.println("But due to the velocity of your fall, your crashlanding gave you few moments of pain before you peacefully passing away ontop of grass. [ENTER]");
+                System.out.println("When the dragon finally crashes, you are flung from it's head into a nearby tree. [ENTER]");
                 keys.nextLine();
-                System.out.println("Ending 11 [Neutral Ending]");
+                System.out.println("Because of this, your sword is stuck in its head. [Sword -1] [ENTER]");
+                sword--;
+                keys.nextLine();
+                System.out.println("The dragon is still alive however, but barely. What will you do? [1 Get Sword Back] [2 Be Defensive]");
+                Dragonchoice5 = keys.nextInt();
             }
             if (Dragonchoice4 == 2){
                 System.out.println("");
-                System.out.println("You decided to hang onto the horns for dear life while the dragon tries to get you off of its head. [ENTER]");
+                System.out.println("You try to hang on to the horn of the dragon to try steering yourself into a much safe landing environment. [ENTER]");
                 keys.nextLine();
-                System.out.println("But not too long after, the dragon heavily crashes down into the ground towards the mountains leaving shockwave that can be heard from all lands. [ENTER]");
+                System.out.println("A mere moment later, at the last second you jumped off from the dragon as it was falling, and you landed into a safe environement. [ENTER]");
                 keys.nextLine();
-                System.out.println("Because of that, you instantly died from crash but the dragon was severily injured. [ENTER]");
+                System.out.println("Unfortunately, due to the velocity of your fall, your crashlanding gave you few moments of pain before you passing away peacefully in a nice field. [ENTER]");
                 keys.nextLine();
-                System.out.println("The dragons injuries were too much and because of it, it took him few moments for him to pass away. [ENTER]");
+                System.out.println("Before your death, you wondered if the dragon had perished from the crash, hoping that it did. [ENTER]");
                 keys.nextLine();
-                System.out.println("Ending 11 [Neutral Ending 2]");
-                keys.nextLine();
+                System.out.println("Ending 2/11: [Failed Hero]");
                 System.exit(0);
 
             }
