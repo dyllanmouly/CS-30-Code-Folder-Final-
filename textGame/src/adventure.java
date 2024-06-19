@@ -115,7 +115,7 @@ public class adventure {
             keys.nextLine();
             System.out.println("You stand there for a second, baffled by the fact that it's still a dead end. [ENTER]");
             keys.nextLine();
-            System.out.println("As you stand there confused, you feel the ground start to shake. The ground cracks open, revealing a lava pit that you are now falling into. \n Ending 3/10: [DEAD End] "); //ENDING
+            System.out.println("As you stand there confused, you feel the ground start to shake. The ground cracks open, revealing a lava pit that you are now falling into. \n Ending 4/11: [DEAD End] "); //ENDING
             System.exit(0);
         }
         else{
@@ -190,7 +190,7 @@ public class adventure {
                 if (volcanoInjury == 3){
                     System.out.println("As you hit the wall, you break your back, and are stuck there, unable to move. [ENTER] ");
                     keys.nextLine();
-                    System.out.println("A little while later, you succumb to your injuries. \nEnding 4/10: [Rock Eater] "); // ENDING
+                    System.out.println("A little while later, you succumb to your injuries. \nEnding 5/11: [Rock Eater] "); // ENDING
                     keys.nextLine();
                     System.exit(0);
                 }
@@ -225,7 +225,7 @@ public class adventure {
             keys.nextLine();
             System.out.println(". . . but you fail, your strength not enough after getting hit by all the boulders. [ENTER]");
             keys.nextLine();
-            System.out.println("You decide to head back, and try again another day. . . if you feel like it. \nEnding 5/10: [Big Ouch] "); /// ENDING
+            System.out.println("You decide to head back, and try again another day. . . if you feel like it. \nEnding 6/11: [Big Ouch] "); /// ENDING
             System.exit(0);
         }
         else if (volcanoInjury <= 1){
@@ -266,7 +266,7 @@ public class adventure {
         if (choiceD1 == 2){
             System.out.println("You decide to not go to the temple as you believe there are more treasures lurking around in your area. [ENTER]");
             keys.nextLine();
-            System.out.println("Unfortunately, your travels around the area has caused you to be de-hydrated due to the heat, which in turn leads you to your death. Great choice of action Hero. \nEnding 6/10: [Dehydration]"); //ENDING
+            System.out.println("Unfortunately, your travels around the area has caused you to be de-hydrated due to the heat, which in turn leads you to your death. Great choice of action Hero. \nEnding 7/11: [Dehydration]"); //ENDING
             System.exit(0);
         }
         return 0;
@@ -294,7 +294,7 @@ public class adventure {
             keys.nextLine();
             System.out.println("You look down and see a TRAP! pressure plate waiting to be stepped on the ground.");
             keys.nextLine();
-            System.out.println("You were too late to move to the side and you explode instantly the moment you landed on the pressure plate. \nEnding 7/10: [metro-booming make it boom]\n \n "); //ENDING
+            System.out.println("You were too late to move to the side and you explode instantly the moment you landed on the pressure plate. \nEnding 8/11: [metro-booming make it boom]"); //ENDING
             System.exit(0);
         }
         return 0;
@@ -314,7 +314,7 @@ public class adventure {
         if (choiceD3 == 2){
             System.out.println("You open the chest on your right and uncover. . . A small Dyllan Mouly plushie ready to screw you up. You exploded instantly on the spot. GG [ENTER] ");
             keys.nextLine();
-            System.out.println("Ending 8/10: [get pernked lol by: Dyllan Mouly] "); //ENDING
+            System.out.println("Ending 9/11: [get pernked lol by: Dyllan Mouly] "); //ENDING
             System.exit(0);
         }
         if (choiceD3 == 3){
@@ -446,7 +446,7 @@ public class adventure {
                 System.out.println("");
                 System.out.println("When you look at the front gate to the dragon's lair, you are filled with a feeling of fear. [ENTER]");
                 keys.nextLine();
-                System.out.println("You decide that slaying this dragon really isn't worth it at all and ran out of there with your tail tucked between your legs. \nEnding 9/10: [The Cowards Way Out] ");
+                System.out.println("You decide that slaying this dragon really isn't worth it at all and ran out of there with your tail tucked between your legs. \nEnding 10/11: [The Cowards Way Out] "); //ENDING
                 System.exit(0);
             }
         }
@@ -460,7 +460,7 @@ public class adventure {
             keys.nextLine();
             System.out.println("You open the gate, feeling pumped up, but before you can even react, you get turned to ash by the dragon's fire breath. [ENTER]");
             keys.nextLine();
-            System.out.println("Turns out that the dragon was just streching. Good job hero. \nEnding 2/10; [Failed Hero]");
+            System.out.println("Turns out that the dragon was just streching. Good job hero. \nEnding 2/11; [Failed Hero]");
             System.exit(0);
             }
             if (beforeDchoiceMissing == 2){
@@ -478,7 +478,7 @@ public class adventure {
         if (armor == 1 || shield == 1 || sword == 1){
             System.out.println("You charge towards the dragon that is waiting at the middle, it suddenly leaps up in the air and does its firebreath at you. [ENTER]");
             keys.nextLine();
-            System.out.println("Do you block or dodge? [1] BLOCK [2] DODGE");
+            System.out.println("Do you block or dodge? [1 Block] [2 Dodge] ");
             Dragonchoice1 = keys.nextInt();
             if (Dragonchoice1 == 1){
                 System.out.println("");
@@ -488,9 +488,9 @@ public class adventure {
                 keys.nextLine();
                 System.out.println("You look around panicked, and when you look up, you see the dragon's foot rapidly approaching you. [ENTER]");
                 keys.nextLine();
-                System.out.println("Before you can react, you are crushed by the dragon. \nEnding 2/10: [Failed Hero]");
+                System.out.println("Before you can react, you are crushed by the dragon. \nEnding 2/11: [Failed Hero]");
                 System.exit(0);
-            }
+            } 
             if (Dragonchoice1 == 2){
                 System.out.println("");
                 System.out.println("You decided to dodge the attack but because of the heat, your armor has been partially melted off. [ENTER]");
@@ -509,17 +509,46 @@ public class adventure {
                 keys.nextLine();
                 System.out.println("You notice the dragon approaching rapidly and you swiftly get out of your spot and run. [ENTER]");
                 keys.nextLine();
-                System.out.println("At the same time, the dragon exhales its deadly fire towards you and with your quick thinking... [1 ???] [2 ???]");
-                Dragonchoice3 = keys.nextInt();
+                System.out.println("At the same time, the dragon exhales it's deadly fire towards you and with your quick thinking... [1 Dodge] [2 Block]");
+                Dragonchoice2 = keys.nextInt();
+            }
 
-
-                if (Dragonchoice3 == 1){
-                System.out.println("");
-                System.out.println("You decided to block the dragons rush attack, but with the cost of your shield being broken. [ENTER]");
-                shield--;
-                System.out.println(shield + "You lost your shield! -dyllan mouly");
+            if (Dragonchoice2 == 1){
+                System.out.println("You dodge out of the way of the dragon's breath, and start to run towards him. [ENTER]");
                 keys.nextLine();
-                System.out.println("The dragon takes you to the skies while you cling onto your life to its horns. [ENTER]");
+                System.out.println("The dragon quickly turnsin your direction and shoots a fireball at you, but you deflect it with your sword. [ENTER] ");
+                keys.nextLine();
+                System.out.println("You quickly close the distance between the two of you and deliver a few quick slashes to the dragons face. [ENTER]");
+                keys.nextLine();
+                System.out.println("This is met with resistance however, and the dragon swats you away with it's paw. [ENTER]");
+                keys.nextLine();
+                System.out.println("You are smacked several feet back, and it looks like the dragon is about to rush at you. Will you: [1 Block] [2 Dodge]");
+                Dragonchoice3 = keys.nextInt();
+            }
+            if (Dragonchoice2 == 2){
+               System.out.println("You try to block the dragon's flame with your shield, but it is useless. [ENTER]"); 
+               keys.nextLine();
+               System.out.println("As the shield melts in your hands and burns them, the dragon quickly closes the distance and grabs you with it's claws. [ENTER]");
+               keys.nextLine();
+               System.out.println("You try to struggle out of it's grasp, but to no avail, as it throws you in it's mouth for a quick snack. \nEnding 2/11: [Failed Hero]");
+               System.exit(0);
+            }
+
+
+
+
+
+
+
+            if (Dragonchoice3 == 1){
+                System.out.println("");
+                System.out.println("You decided to parry the dragons rush attack and stun it, but with the cost of your shield being broken. [ENTER]");
+                shield--;
+                System.out.println(shield + "You lost your shield! -dyllan mouly [ENTER]");
+                keys.nextLine();
+                System.out.println("While it's stunned, you quickly scale the dragon and reach it's head to deliver a killing blow. [ENTER]");
+                keys.nextLine();
+                System.out.println("The dragon recovers, and takes you to the skies while you cling onto your life to its horns. [ENTER]");
                 keys.nextLine();
                 System.out.println("But since you're ontop of its head, you grabbed your sword and stab it directly into its skull. [ENTER]");
                 keys.nextLine();
@@ -527,7 +556,7 @@ public class adventure {
                 keys.nextLine();
                 System.out.println("The dragon heavily crashes into the ground, leaving thick smoke and debris going everywhere. Because of that, the impact greated affected your armor. [ENTER]");
                 armor--;
-                System.out.println("YOU REAP WHAT YOU SOW, YOUR ARMOR MAKES ME G-  -jacob rivera");
+                System.out.println("YOU REAP WHAT YOU SOW, YOUR ARMOR MAKES ME G-  -jacob rivera [ENTER]");
                 keys.nextLine();
                 System.out.println("...");
                 keys.nextLine();
@@ -537,17 +566,31 @@ public class adventure {
                 keys.nextLine();
                 System.out.println("Dust slowly settles and you slowly get up with a headache and a concussion but you still stayed on guard just in case. [ENTER]");
                 keys.nextLine();
-                System.out.println("After a bit, you see a silhouette of the dragon and it alerts you, it looks like it's preparing to attack! [ENTER]");
+                System.out.println("After a bit, you see a silhouette of the dragon in the smoke, it looks like it's preparing to attack! [ENTER]");
                 keys.nextLine();
-                System.out.println("But when the smoke and dust is completely away, the dragon is seen dead on the ground. The silhouette made it look like it was about to attack. [ENTER]");
+                System.out.println("But to your surprise, the dragon is seen dead on the ground. [ENTER]");
                 keys.nextLine();
-                System.out.println("You did it hero! you saved the world!");
+                System.out.println("You did it hero! you saved the world! [ENTER]");
                 keys.nextLine();
-                System.out.println("Ending 1/10: [Pernk Saver]");
+                System.out.println("... [ENTER]");
+                keys.nextLine();
+                System.out.println("You feel strange ... [ENTER]");
+                keys.nextLine();
+                System.out.println("You look down at your stomach and you see a giant gash across it. [ENTER]");
+                keys.nextLine();
+                System.out.println("As you begin to realize, you slowly start losing consciousness. [ENTER]");
+                keys.nextLine();
+                System.out.println("You stumble, trying to stay on your feet, but it is futile. You fall to the ground and slowly bleed out. [ENTER]");
+                keys.nextLine();
+                System.out.println("You saved the world, but at what cost? \nEnding 3/11: [Sacrifice]");
+                System.exit(0);
+            }
+            if (Dragonchoice3 == 2){
+                System.out.println("");
             }
 
             }
-        }
+        
         return 0;
 //pernk
     }
