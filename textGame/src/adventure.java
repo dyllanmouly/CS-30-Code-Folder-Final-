@@ -505,12 +505,51 @@ public class adventure {
                 keys.nextLine();
                 System.out.println("You run and find cover until you can form a plan to defeat the dragon once and for all. [ENTER]");
                 keys.nextLine();
-                System.out.println("The dragon swiftly leaps down to the ground towards you while");
+                System.out.println("The dragon swiftly leaps down to the ground towards you while you were still in cover. [ENTER]");
+                keys.nextLine();
+                System.out.println("You notice the dragon approaching rapidly and you swiftly get out of your spot and run. [ENTER]");
+                keys.nextLine();
+                System.out.println("At the same time, the dragon exhales its deadly fire towards you and with your quick thinking... [1 ???] [2 ???]");
+                Dragonchoice3 = keys.nextInt();
+
+
+                if (Dragonchoice3 == 1){
+                System.out.println("");
+                System.out.println("You decided to block the dragons rush attack, but with the cost of your shield being broken. [ENTER]");
+                shield--;
+                System.out.println(shield + "You lost your shield! -dyllan mouly");
+                keys.nextLine();
+                System.out.println("The dragon takes you to the skies while you cling onto your life to its horns. [ENTER]");
+                keys.nextLine();
+                System.out.println("But since you're ontop of its head, you grabbed your sword and stab it directly into its skull. [ENTER]");
+                keys.nextLine();
+                System.out.println("The dragon roars in pain and because of that, it falls fast towards to the ground, while you were still hanging on for dear life. [ENTER]");
+                keys.nextLine();
+                System.out.println("The dragon heavily crashes into the ground, leaving thick smoke and debris going everywhere. Because of that, the impact greated affected your armor. [ENTER]");
+                armor--;
+                System.out.println("YOU REAP WHAT YOU SOW, YOUR ARMOR MAKES ME G-  -jacob rivera");
+                keys.nextLine();
+                System.out.println("...");
+                keys.nextLine();
+                System.out.println("...");
+                keys.nextLine();
+                System.out.println("...");
+                keys.nextLine();
+                System.out.println("Dust slowly settles and you slowly get up with a headache and a concussion but you still stayed on guard just in case. [ENTER]");
+                keys.nextLine();
+                System.out.println("After a bit, you see a silhouette of the dragon and it alerts you, it looks like it's preparing to attack! [ENTER]");
+                keys.nextLine();
+                System.out.println("But when the smoke and dust is completely away, the dragon is seen dead on the ground. The silhouette made it look like it was about to attack. [ENTER]");
+                keys.nextLine();
+                System.out.println("You did it hero! you saved the world!");
+                keys.nextLine();
+                System.out.println("Ending 1/10: [Pernk Saver]");
             }
 
-            
+            }
         }
         return 0;
 //pernk
     }
 }
+
