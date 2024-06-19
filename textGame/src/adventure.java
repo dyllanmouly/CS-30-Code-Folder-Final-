@@ -535,11 +535,6 @@ public class adventure {
             }
 
 
-
-
-
-
-
             if (Dragonchoice3 == 1){
                 System.out.println("");
                 System.out.println("You decided to parry the dragons rush attack and stun it, but with the cost of your shield being broken. [ENTER]");
@@ -592,7 +587,7 @@ public class adventure {
             }
         
         return 0;
-//pernk
+//pernk 23
     }
 }
 
