@@ -587,7 +587,7 @@ public class adventure {
             }
         
         return 0;
-//pernk 23
+//pernk 23 24
     }
 }
 
