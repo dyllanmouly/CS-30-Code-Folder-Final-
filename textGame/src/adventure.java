@@ -582,13 +582,56 @@ public class adventure {
             }
             if (Dragonchoice3 == 2){
                 System.out.println("");
+                System.out.println("You decided to dodge and avoid the dragon's rush attack but barely. [ENTER]");
+                keys.nextLine();
+                System.out.println("The dragon quickly turns around and rushs you again, but this time you take a stance and prepare yourself. [ENTER]");
+                keys.nextLine();
+                System.out.println("The dragon swiftly goes to your directiom, but you jump up and land ontop of its head. [ENTER]");
+                keys.nextLine();
+                System.out.println("You then grab its horns to control its movement leaving the dragon somewhat able to control itself. [ENTER]");
+                keys.nextLine();
+                System.out.println("You then control the dragon to ram and slide itself through the walls hard while you take cover from the debris. [ENTER]");
+                keys.nextLine();
+                System.out.println("After that, you control its head to aim down to the ground so it can crash land. [ENTER]");
+                keys.nextLine();
+                System.out.println("The dragon is attempting to get you off from its head by shaking and moving violently, because of it you are about to fall off! [ENTER]");
+                keys.nextLine();
+                System.out.println("You can use your sword and stab it through the head for steady grip, or keep hanging onto the horns. [1] [2]");
+                Dragonchoice4 = keys.nextInt();
             }
+            if (Dragonchoice4 == 1){
+                System.out.println("");
+                System.out.println("You chose to stab your sword through the head of the dragon for more quick to try steer yourself into a much safe landing environment. [ENTER]");
+                keys.nextLine();
+                System.out.println("A smear moment later, at the last second you jumped off from the dragon and landed into a safe environement instead of the dragon. [ENTER]");
+                keys.nextLine();
+                System.out.println("Before your death, you wondered if the dragon had perished from the crash, hoping that it did. [ENTER]");
+                keys.nextLine();
+                System.out.println("But due to the velocity of your fall, your crashlanding gave you few moments of pain before you peacefully passing away ontop of grass. [ENTER]");
+                keys.nextLine();
+                System.out.println("Ending 11 [Neutral Ending]");
+            }
+            if (Dragonchoice4 == 2){
+                System.out.println("");
+                System.out.println("You decided to hang onto the horns for dear life while the dragon tries to get you off of its head. [ENTER]");
+                keys.nextLine();
+                System.out.println("But not too long after, the dragon heavily crashes down into the ground towards the mountains leaving shockwave that can be heard from all lands. [ENTER]");
+                keys.nextLine();
+                System.out.println("Because of that, you instantly died from crash but the dragon was severily injured. [ENTER]");
+                keys.nextLine();
+                System.out.println("The dragons injuries were too much and because of it, it took him few moments for him to pass away. [ENTER]");
+                keys.nextLine();
+                System.out.println("Ending 11 [Neutral Ending 2]");
+                keys.nextLine();
+                System.exit(0);
 
+            }
+            
             }
         
         return 0;
 //pernk 23 24
-// ur my sunshine
+// ur my sunshine whoops
     }
 }
 
