@@ -624,6 +624,19 @@ public class adventure {
                 System.exit(0);
 
             }
+            if (Dragonchoice5 == 1){
+                System.out.println("You decide that your top priority is getting your sword back and ending this quickly. [ENTER]");
+                keys.nextLine();
+                System.out.println("You begin to rush towards the dragon once again, the dragon stands there ready. [ENTER]");
+                keys.nextLine();
+                System.out.println("As you rush towards it, you smack it with your shield, hoping to stun it, but it just stands there unmoving. [ENTER]");
+                keys.nextLine();
+                System.out.println("You stand there shocked for a moment, and in that moment the dragon lunges on you and eats you whole. \nEnding 2/11 [Failed Hero]");
+                System.exit(0);
+            }
+            if (Dragonchoice5 == 2){
+                
+            }
             
             }
         
