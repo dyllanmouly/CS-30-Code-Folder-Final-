@@ -635,6 +635,23 @@ public class adventure {
                 System.exit(0);
             }
             if (Dragonchoice5 == 2){
+                System.out.println("");
+                System.out.println("You get defensive without the sword and the dragon being enraged, charges towards you with all of its strength and power. [ENTER]");
+                keys.nextLine();
+                System.out.println("You put on a stance and ready to take action whenever possible as the dragon charges towards you. [ENTER]");
+                keys.nextLine();
+                System.out.println("As the dragon gets closer...");
+                keys.nextLine();
+                System.out.println("And closer...");
+                keys.nextLine();
+                System.out.println("And closer...");
+                keys.nextLine();
+                System.out.println("The dragon collapses right infront of you. It quickly ran out of stamina and because it was bleeding too much. [ENTER]");
+                keys.nextLine();
+                System.out.println("It seems to have died. [ENTER]");
+                keys.nextLine();
+                System.out.println("Good job, you have successfully defeated the dragon!!!! \n Ending 1/11: [Hero of Pernk]");
+                keys.nextLine();
                 
             }
             
