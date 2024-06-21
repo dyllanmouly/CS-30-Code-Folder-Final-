@@ -107,6 +107,7 @@ public class adventure {
             System.out.println("You stand there for a second, baffled by the fact that it's still a dead end. [ENTER]");
             keys.nextLine();
             System.out.println("As you stand there confused, you feel the ground start to shake. The ground cracks open, revealing a lava pit that you are now falling into. \nEnding 4/11: [DEAD End] "); //ENDING
+            keys.nextLine();
             System.exit(0);
         }
         else{
@@ -217,6 +218,7 @@ public class adventure {
             System.out.println(". . . but you fail, your strength not enough after getting hit by all the boulders. [ENTER]");
             keys.nextLine();
             System.out.println("You decide to head back, and try again another day. . . if you feel like it. \nEnding 6/11: [Big Ouch] "); /// ENDING
+            keys.nextLine();
             System.exit(0);
         }
         else if (volcanoInjury <= 1){
@@ -259,6 +261,7 @@ public class adventure {
             System.out.println("You decide to not go to the temple as you believe there are more treasures lurking around in your area. [ENTER]");
             keys.nextLine();
             System.out.println("Unfortunately, your travels around the area has caused you to be de-hydrated due to the heat, which in turn leads you to your death. Great choice of action Hero. \nEnding 7/11: [Dehydration]"); //ENDING
+            keys.nextLine();
             System.exit(0);
         }
         return 0;
@@ -287,6 +290,7 @@ public class adventure {
             System.out.println("You look down and see a TRAP! pressure plate waiting to be stepped on the ground.");
             keys.nextLine();
             System.out.println("You were too late to move to the side and you explode instantly the moment you landed on the pressure plate. \nEnding 8/11: [metro-booming make it boom]"); //ENDING
+            keys.nextLine();
             System.exit(0);
         }
         return 0;
@@ -307,6 +311,7 @@ public class adventure {
             System.out.println("You open the chest on your right and uncover. . . A small Dyllan Mouly plushie ready to screw you up. You exploded instantly on the spot. GG [ENTER] ");
             keys.nextLine();
             System.out.println("Ending 9/11: [get pernked lol by: Dyllan Mouly] "); //ENDING
+            keys.nextLine();
             System.exit(0);
         }
         if (choiceD3 == 3){
@@ -379,6 +384,7 @@ public class adventure {
             System.out.println("Such time has passed and you lost track of time, but your determination to find something atleast when the walking is done burns evermore greater. [ENTER]");
             keys.nextLine();
             System.out.println("Ending: ??? [See you on the other side] "); //ENDING
+            keys.nextLine();
             System.exit(0);
         }
         return 0;
@@ -440,6 +446,7 @@ public class adventure {
                 System.out.println("When you look at the front gate to the dragon's lair, you are filled with a feeling of fear. [ENTER]");
                 keys.nextLine();
                 System.out.println("You decide that slaying this dragon really isn't worth it at all and ran out of there with your tail tucked between your legs. \nEnding 10/11: [The Cowards Way Out] "); //ENDING
+                keys.nextLine();
                 System.exit(0);
             }
         }
@@ -454,6 +461,7 @@ public class adventure {
             System.out.println("You open the gate, feeling pumped up, but before you can even react, you get turned to ash by the dragon's fire breath. [ENTER]");
             keys.nextLine();
             System.out.println("Turns out that the dragon was just streching. Good job hero. \nEnding 2/11; [Failed Hero]");
+            keys.nextLine();
             System.exit(0);
             }
             if (beforeDchoiceMissing == 2){
@@ -482,6 +490,7 @@ public class adventure {
                 System.out.println("You look around panicked, and when you look up, you see the dragon's foot rapidly approaching you. [ENTER]");
                 keys.nextLine();
                 System.out.println("Before you can react, you are crushed by the dragon. \nEnding 2/11: [Failed Hero]");
+                keys.nextLine();
                 System.exit(0);
             } 
             if (Dragonchoice1 == 2){
@@ -527,6 +536,7 @@ public class adventure {
                System.out.println("As the shield melts in your hands and burns them, the dragon quickly closes the distance and grabs you with it's claws. [ENTER]");
                keys.nextLine();
                System.out.println("You try to struggle out of it's grasp, but to no avail, as it throws you in it's mouth for a quick snack. \nEnding 2/11: [Failed Hero]");
+               keys.nextLine();
                System.exit(0);
             }
 
@@ -572,6 +582,7 @@ public class adventure {
                 System.out.println("You stumble, trying to stay on your feet, but it is futile. You fall to the ground and slowly bleed out. [ENTER]");
                 keys.nextLine();
                 System.out.println("You saved the world, but at what cost? \nEnding 3/11: [Sacrifice]");
+                keys.nextLine();
                 System.exit(0);
             }
             if (Dragonchoice3 == 2){
@@ -618,6 +629,7 @@ public class adventure {
                 System.out.println("Before your death, you wondered if the dragon had perished from the crash, hoping that it did. [ENTER]");
                 keys.nextLine();
                 System.out.println("Ending 2/11: [Failed Hero]");
+                keys.nextLine();
                 System.exit(0);
 
             }
@@ -630,6 +642,7 @@ public class adventure {
                 System.out.println("As you rush towards it, you smack it with your shield, hoping to stun it, but it just stands there unmoving. [ENTER]");
                 keys.nextLine();
                 System.out.println("You stand there shocked for a moment, and in that moment the dragon lunges on you and eats you whole. \nEnding 2/11 [Failed Hero]");
+                keys.nextLine();
                 System.exit(0);
             }
             if (Dragonchoice5 == 2){

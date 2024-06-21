@@ -20,6 +20,7 @@ public class adventureGame {
             System.out.println("You decided to stay in bed. You thought that fighting was too much work, and you needed your beauty sleep. [ENTER]");
             keys.nextLine();
             System.out.println("Ending 11/11: [Sleepy]"); //ENDING
+            keys.nextLine();
             System.exit(0);
         }
     }
