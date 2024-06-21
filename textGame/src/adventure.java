@@ -33,15 +33,6 @@ public class adventure {
 
     public static int splitpaths(){
         Scanner keys = new Scanner(System.in);
-        if (sword == 1){
-            equipmentList.add("Legendary Sword of Flame");
-        }
-        if (shield == 1){
-            equipmentList.add("Shield of the Lake");
-        }
-        if (armor == 1){
-            equipmentList.add("Rock Armor");
-        }
         System.err.println("");
         System.out.println("You stumble upon the crossroads. [Enter]");
         keys.nextLine();
@@ -115,7 +106,7 @@ public class adventure {
             keys.nextLine();
             System.out.println("You stand there for a second, baffled by the fact that it's still a dead end. [ENTER]");
             keys.nextLine();
-            System.out.println("As you stand there confused, you feel the ground start to shake. The ground cracks open, revealing a lava pit that you are now falling into. \n Ending 4/11: [DEAD End] "); //ENDING
+            System.out.println("As you stand there confused, you feel the ground start to shake. The ground cracks open, revealing a lava pit that you are now falling into. \nEnding 4/11: [DEAD End] "); //ENDING
             System.exit(0);
         }
         else{
@@ -235,6 +226,7 @@ public class adventure {
             keys.nextLine();
             System.out.println("You exit the temple and return back to the city, succeeding in collecting one of the legendary warrior pieces.");
             sword++;
+            equipmentList.add("Legendary Sword of Flame");
             keys.nextLine();
             splitpaths();
         }
@@ -326,6 +318,7 @@ public class adventure {
             keys.nextLine();
             System.out.println("You grabbed the armor piece and climbed yourself out of the hole, and out towards the crossroads to contine your adventure.");
             armor++;
+            equipmentList.add("Rock Armor");
             splitpaths();
         }
         return 0;
@@ -419,7 +412,7 @@ public class adventure {
         keys.nextLine();
         System.out.println("It is time to head back to the crossroads you said, but it will take a long due to how far you ventured in here. [ENTER]");
         shield++;
-
+        equipmentList.add("Shield of the Lake");
         return 0;
     }
 
@@ -495,13 +488,14 @@ public class adventure {
                 System.out.println("");
                 System.out.println("You decided to dodge the attack but because of the heat, your armor has been partially melted off. [ENTER]");
                 keys.nextLine();
+                System.out.println("");
                 System.out.println("The dragon charges another firebreath attack and he launches it towards you. [ENTER]");
                 keys.nextLine();
-                System.out.println("The attack seems way bigger than last time and you have no choice but to block the attacl. [ENTER]");
+                System.out.println("The attack seems way bigger than last time and you have no choice but to block the attack. [ENTER]");
                 keys.nextLine();
                 System.out.println("You block the attack, but with the shield rapidly melting you have to make a quick decision. [ENTER]");
                 keys.nextLine();
-                System.out.println("You move quickly to the side out from the fire attack but it starts to follow you. [ENTR]");
+                System.out.println("You move quickly to the side out from the fire attack but it starts to follow you. [ENTER]");
                 keys.nextLine();
                 System.out.println("You run and find cover until you can form a plan to defeat the dragon once and for all. [ENTER]");
                 keys.nextLine();
@@ -516,6 +510,7 @@ public class adventure {
             if (Dragonchoice2 == 1){
                 System.out.println("You dodge out of the way of the dragon's breath, and start to run towards him. [ENTER]");
                 keys.nextLine();
+                System.out.println("");
                 System.out.println("The dragon quickly turnsin your direction and shoots a fireball at you, but you deflect it with your sword. [ENTER] ");
                 keys.nextLine();
                 System.out.println("You quickly close the distance between the two of you and deliver a few quick slashes to the dragons face. [ENTER]");
@@ -528,6 +523,7 @@ public class adventure {
             if (Dragonchoice2 == 2){
                System.out.println("You try to block the dragon's flame with your shield, but it is useless. [ENTER]"); 
                keys.nextLine();
+               System.out.println("");
                System.out.println("As the shield melts in your hands and burns them, the dragon quickly closes the distance and grabs you with it's claws. [ENTER]");
                keys.nextLine();
                System.out.println("You try to struggle out of it's grasp, but to no avail, as it throws you in it's mouth for a quick snack. \nEnding 2/11: [Failed Hero]");
@@ -538,6 +534,7 @@ public class adventure {
                 System.out.println("");
                 System.out.println("You decided to parry the dragons rush attack and stun it, but with the cost of your shield being broken. [Shield -1] [ENTER]");
                 shield--;
+                System.out.println("");
                 keys.nextLine();
                 System.out.println("While it's stunned, you quickly scale the dragon and reach it's head to deliver a killing blow. [ENTER]");
                 keys.nextLine();
@@ -550,17 +547,17 @@ public class adventure {
                 System.out.println("The dragon heavily crashes into the ground, leaving thick smoke and debris going everywhere. Because of that, the impact greated affected your armor. [Armor -1] [ENTER]");
                 armor--;
                 keys.nextLine();
-                System.out.println("...");
+                System.out.println("... [ENTER]");
                 keys.nextLine();
-                System.out.println("...");
+                System.out.println("... [ENTER]");
                 keys.nextLine();
-                System.out.println("...");
+                System.out.println("... [ENTER]");
                 keys.nextLine();
                 System.out.println("Dust slowly settles and you slowly get up with a headache and a concussion but you still stayed on guard just in case. [ENTER]");
                 keys.nextLine();
                 System.out.println("After a bit, you see a silhouette of the dragon in the smoke, it looks like it's preparing to attack! [ENTER]");
                 keys.nextLine();
-                System.out.println("But to your surprise, the dragon is seen dead on the ground. [ENTER]");
+                System.out.println("But to your surprise, after the smoke clears the dragon is seen dead on the ground. [ENTER]");
                 keys.nextLine();
                 System.out.println("You did it hero! you saved the world! [ENTER]");
                 keys.nextLine();
@@ -624,6 +621,7 @@ public class adventure {
                 System.exit(0);
 
             }
+
             if (Dragonchoice5 == 1){
                 System.out.println("You decide that your top priority is getting your sword back and ending this quickly. [ENTER]");
                 keys.nextLine();
@@ -652,7 +650,6 @@ public class adventure {
                 keys.nextLine();
                 System.out.println("Good job, you have successfully defeated the dragon!!!! \n Ending 1/11: [Hero of Pernk]");
                 keys.nextLine();
-                
             }
             
             }
